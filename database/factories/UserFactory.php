@@ -4,6 +4,7 @@
 
 use App\User;
 use Faker\Generator as Faker;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /*
@@ -24,7 +25,7 @@ $factory->define(User::class, function (Faker $faker) {
         'gender' => $faker->randomElement(['male', 'female']),
         'email' => $faker->unique()->email,
         'cellphone_number' => $faker->e164PhoneNumber,
-        'password' => User::DEFAULT_PASSWORD,
+        'password' => Hash::make(User::DEFAULT_PASSWORD),
     ];
 })->afterCreating(User::class, function (User $user) {
     $user->image()->create(['url' => url(User::DEFAULT_PROFILE_PICTURE)]);

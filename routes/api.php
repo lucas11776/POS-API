@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('auth')->namespace('auth')->group(function () {
-    Route::post('register', 'RegisterController@register')->middleware(['guest']);
+Route::prefix('auth')->namespace('authentication')->middleware('api')->group(function () {
+    Route::post('register', 'AuthController@Register')->middleware(['isGuest']);
+    Route::post('login', 'AuthController@Login')->middleware(['isGuest']);
 });

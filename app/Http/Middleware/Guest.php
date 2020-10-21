@@ -16,11 +16,11 @@ class Guest
      */
     public function handle(Request $request, Closure $next)
     {
-        
+
         if(! auth('api')->guest()) {
             return response()->json(['message' => 'Unauthorized Access'], 401);
         }
-        
+
         return $next($request);
     }
 }

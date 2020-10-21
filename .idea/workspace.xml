@@ -11,22 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Authentication/RegisterRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/Authentication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/AuthenticationInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/RegexExpresses.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ImageFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_172200_create_images_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Authentication/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Guard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Authentication/LoginRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/LoginTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Auth/RegisterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Guest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Guest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Authentication/RegisterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Authentication/RegisterRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Authentication.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +159,34 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner directory="$PROJECT_DIR$/app/Http/Controllers/Api/Auth" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Authentication\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LoginTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Authentication\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -171,6 +196,18 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="PHPUnit.phpunit.xml" />
+      <item itemvalue="PHPUnit.Auth" />
+      <item itemvalue="PHPUnit.LoginTest" />
+      <item itemvalue="PHPUnit.RegisterTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.RegisterTest" />
+        <item itemvalue="PHPUnit.LoginTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -184,7 +221,7 @@
       <updated>1603206933346</updated>
       <workItem from="1603206935601" duration="420000" />
       <workItem from="1603207369497" duration="7710000" />
-      <workItem from="1603255427180" duration="3103000" />
+      <workItem from="1603255427180" duration="12254000" />
     </task>
     <servers />
   </component>
@@ -207,18 +244,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="327" y="0" width="640" height="680" key="#Auth" timestamp="1603259636590">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="327" y="0" width="640" height="680" key="#Auth/0.0.1280.680@0.0.1280.680" timestamp="1603259636590" />
+    <state x="327" y="0" width="640" height="680" key="#LoginTest" timestamp="1603258779490">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="327" y="0" width="640" height="680" key="#LoginTest/0.0.1280.680@0.0.1280.680" timestamp="1603258779489" />
+    <state x="327" y="0" width="640" height="680" key="#RegisterTest" timestamp="1603259559644">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="327" y="0" width="640" height="680" key="#RegisterTest/0.0.1280.680@0.0.1280.680" timestamp="1603259559644" />
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603259647608">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603259647608" />
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser" timestamp="1603212340608">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603212340608" />
-    <state x="427" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603209338030">
+    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603263056206">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="427" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1603209338030" />
+    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1603263056206" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603207461516">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603258832873">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603258832873" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -227,22 +284,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="331" height="552" key="GridCell.Tab.0.bottom" timestamp="1603258529798">
+    <state width="341" height="552" key="GridCell.Tab.0.bottom" timestamp="1603268786160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="331" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603258529798" />
-    <state width="331" height="552" key="GridCell.Tab.0.center" timestamp="1603258529797">
+    <state width="341" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603268786160" />
+    <state width="341" height="552" key="GridCell.Tab.0.center" timestamp="1603268786160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="331" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603258529797" />
-    <state width="331" height="552" key="GridCell.Tab.0.left" timestamp="1603258529797">
+    <state width="341" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603268786160" />
+    <state width="341" height="552" key="GridCell.Tab.0.left" timestamp="1603268786160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="331" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603258529797" />
-    <state width="331" height="552" key="GridCell.Tab.0.right" timestamp="1603258529797">
+    <state width="341" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603268786160" />
+    <state width="341" height="552" key="GridCell.Tab.0.right" timestamp="1603268786160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="331" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603258529797" />
+    <state width="341" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603268786160" />
     <state x="377" y="62" key="NewPhpClassDialog" timestamp="1603212312204">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -251,6 +308,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="474" y="263" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603211736946" />
+    <state x="0" y="0" width="587" height="680" key="find.popup" timestamp="1603259596651">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="587" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603259596651" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1603257415332">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

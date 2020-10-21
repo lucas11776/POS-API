@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \App\Http\Middleware\Cros::class
+        \App\Http\Middleware\Cros::class,
     ];
 
     /**
@@ -39,9 +39,10 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+            'guard:api',
             'throttle:60,1',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\Cros::class
+            \App\Http\Middleware\Cros::class,
         ],
     ];
 
@@ -63,9 +64,10 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'cros' => \App\Http\Middleware\Cros::class,
         'auth.jwt' => \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
-        'auth.guest' => \App\Http\Middleware\Guest::class
+        'cros' => \App\Http\Middleware\Cros::class,
+        'guard' => \App\Http\Middleware\Guard::class,
+        'isGuest' => \App\Http\Middleware\Guest::class,
     ];
 
     /**

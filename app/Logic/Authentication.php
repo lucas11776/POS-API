@@ -24,14 +24,26 @@ class Authentication implements AuthenticationInterface
     public function register(array $form): User
     {
         $user = $this->create($form);
+
         $user->image = $user->image()
             ->create(['url' => url(User::DEFAULT_PROFILE_PICTURE)]);
+
         return $user;
     }
 
     public function login(array $credentials)
     {
-        // TODO: Implement login() method.
+        $user = $this->getUserByUsername($credentials['username']);
+
+        if(is_null($user)) {
+            return null;
+        }
+
+        if(! Hash::check($credentials['password'], $user->getAttribute('password'))) {
+            return null;
+        }
+
+        return $user;
     }
 
     public function respond_with_token(User $user, bool $stay_logged_in = false): array
@@ -55,9 +67,18 @@ class Authentication implements AuthenticationInterface
         ]);
     }
 
+    protected function getUserByUsername($username)
+    {
+        return User::query()
+            ->where(['email' => $username ])
+            ->orWhere(['cellphone_number' => $username])
+            ->first();
+    }
+
     protected function user_to_token(User $user, bool $stay_logged_in): string
     {
-        return auth('api')->setTTL($stay_logged_in ? self::SECONDS_IN_YEAR : self::SECONDS_IN_DAY)
+        return auth()
+            ->setTTL($stay_logged_in ? self::SECONDS_IN_YEAR : self::SECONDS_IN_DAY)
             ->login($user);
     }
 }

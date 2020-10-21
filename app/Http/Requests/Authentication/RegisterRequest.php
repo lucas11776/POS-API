@@ -16,7 +16,7 @@ class RegisterRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth('api')->guest();
+        return auth()->guest();
     }
 
     /**
