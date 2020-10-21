@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,7 +29,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_names', 'gender', 'email', 'cellphone_number'
+        'first_name', 'last_name', 'gender', 'email', 'cellphone_number', 'password'
     ];
 
     /**
@@ -50,7 +51,26 @@ class User extends Authenticatable implements JWTSubject
         'cellphone_number_verified_at' => 'datetime'
     ];
 
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = [
+        'image'
+    ];
+
     use Notifiable;
+
+    /**
+     * User profile picture image.
+     *
+     * @return MorphOne
+     */
+    public function image(): MorphOne
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
 
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
