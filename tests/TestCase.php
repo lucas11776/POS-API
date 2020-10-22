@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Role;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\Artisan;

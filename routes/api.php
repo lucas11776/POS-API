@@ -13,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('auth')->namespace('authentication')->middleware('api')->group(function () {
+Route::prefix('auth')->namespace('authentication')->group(function () {
     Route::post('register', 'AuthController@Register')->middleware(['isGuest']);
     Route::post('login', 'AuthController@Login')->middleware(['isGuest']);
+});
+
+Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(function () {
+    Route::prefix('{user}')->group(function() {
+        Route::prefix('role')->group(function() {
+            Route::post('', 'RoleController@Add')->middleware(['isAdministrator']);
+        });
+    });
 });

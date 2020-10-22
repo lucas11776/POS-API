@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
@@ -57,7 +58,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $with = [
-        'image'
+        'image', 'roles'
     ];
 
     use Notifiable;
@@ -70,6 +71,16 @@ class User extends Authenticatable implements JWTSubject
     public function image(): MorphOne
     {
         return $this->morphOne(Image::class, 'imageable');
+    }
+
+    /**
+     * Get roles that belong to the user.
+     *
+     * @return BelongsToMany
+     */
+    public function roles(): BelongsToMany
+    {
+        return $this->belongsToMany(Role::class, UsersRoles::class);
     }
 
     /**
@@ -91,5 +102,4 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
-
 }

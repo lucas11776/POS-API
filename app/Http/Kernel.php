@@ -68,6 +68,8 @@ class Kernel extends HttpKernel
         'cros' => \App\Http\Middleware\Cros::class,
         'guard' => \App\Http\Middleware\Guard::class,
         'isGuest' => \App\Http\Middleware\Guest::class,
+        'isUser' => \App\Http\Middleware\User::class,
+        'isAdministrator' => \App\Http\Middleware\Administrator::class,
     ];
 
     /**
