@@ -6,6 +6,7 @@ namespace App\Logic;
 
 use App\Role;
 use App\User as Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class User implements UserInterface
 {
@@ -16,6 +17,8 @@ class User implements UserInterface
 
     public function removeRole(Model $user, Role $role): void
     {
-        // TODO: Implement removeRole() method.
+        $role = $user->roles()->find($role);
+
+        $role->pivot->delete();
     }
 }

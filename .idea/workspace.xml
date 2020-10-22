@@ -11,24 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Users/RoleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Administrator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/AddRoleRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/UserInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/UsersInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UsersRoles.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/RoleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_083710_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_21_084527_create_users_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/AddRoleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/phpunit_xml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/RemoveRoleRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/RemoveRoleTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Users/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Users/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +141,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -164,7 +154,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.AddRoleTest">
+  <component name="RunManager" selected="PHPUnit.RemoveRoleTest">
     <configuration name="AddRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -201,16 +191,17 @@
       <TestRunner class="Tests\Feature\Api\Authentication\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+    <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP Lib" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" />
+      <TestRunner class="Tests\Feature\Api\User\RemoveRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/RemoveRoleTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.Auth" />
       <item itemvalue="PHPUnit.LoginTest" />
@@ -238,7 +229,7 @@
       <workItem from="1603206935601" duration="420000" />
       <workItem from="1603207369497" duration="7710000" />
       <workItem from="1603255427180" duration="20889000" />
-      <workItem from="1603347305021" duration="456000" />
+      <workItem from="1603347305021" duration="3948000" />
     </task>
     <servers />
   </component>
@@ -277,9 +268,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="327" y="0" width="640" height="680" key="#RegisterTest/0.0.1280.680@0.0.1280.680" timestamp="1603259559644" />
-    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603259647608">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="327" y="88" key="#RemoveRoleTest" timestamp="1603349612003">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
+    <state x="327" y="88" key="#RemoveRoleTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603349612003" />
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603348927180">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603348927180" />
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603259647608" />
     <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser" timestamp="1603273550060">
       <screen x="0" y="0" width="1280" height="984" />
@@ -307,25 +303,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom" timestamp="1603300539641">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="624" key="GridCell.Tab.0.bottom" timestamp="1603351264759">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603290089567" />
+    <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264759" />
     <state width="1281" height="624" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.center" timestamp="1603300539641">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="624" key="GridCell.Tab.0.center" timestamp="1603351264758">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603290089566" />
+    <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264758" />
     <state width="1281" height="624" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.left" timestamp="1603300539641">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="624" key="GridCell.Tab.0.left" timestamp="1603351264757">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603290089566" />
+    <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264757" />
     <state width="1281" height="624" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.right" timestamp="1603300539641">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="624" key="GridCell.Tab.0.right" timestamp="1603351264758">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603290089567" />
+    <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264758" />
     <state width="1281" height="624" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
     <state x="377" y="90" key="NewPhpClassDialog" timestamp="1603273519953">
       <screen x="0" y="0" width="1280" height="984" />
@@ -345,6 +341,10 @@
     </state>
     <state width="600" height="452" key="javadoc.popup/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603275177371" />
     <state width="600" height="428" key="javadoc.popup/0.0.1280.680@0.0.1280.680" timestamp="1603257415332" />
+    <state x="363" y="263" key="refactoring.ChangeSignatureDialog" timestamp="1603350230650">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="363" y="263" key="refactoring.ChangeSignatureDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603350230650" />
     <state x="296" y="150" key="run.anything.popup" timestamp="1603210925064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -364,5 +364,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Api@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1603348890900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

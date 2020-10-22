@@ -22,6 +22,7 @@ Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(functi
     Route::prefix('{user}')->group(function() {
         Route::prefix('role')->group(function() {
             Route::post('', 'RoleController@Add')->middleware(['isAdministrator']);
+            Route::delete('', 'RoleController@Remove')->middleware(['isAdministrator']);
         });
     });
 });
