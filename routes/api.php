@@ -26,3 +26,12 @@ Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(functi
         });
     });
 });
+
+Route::prefix('products')->namespace('products')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::post('', 'CategoryController@Create')->middleware(['isUser', 'isAdministrator']);
+        Route::prefix('{ProductsCategory}')->group(function () {
+            Route::match(['PATCH','UPDATE'],'', 'CategoryController@Update')->middleware(['isUser', 'isAdministrator']);
+        });
+    });
+});

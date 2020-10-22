@@ -11,13 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/phpunit_xml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/RemoveRoleRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/RemoveRoleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/CreateCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Logic/Products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ProductsCategory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ProductsCategoryFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_073310_create_products_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_104351_create_products_categories_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductCategoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Users/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Users/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/User/AddRoleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Users/AddRoleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/User/RemoveRoleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Users/RemoveRoleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,16 +163,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.RemoveRoleTest">
-    <configuration name="AddRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP Lib" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="Tests\Feature\Api\User\AddRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/AddRoleTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.UpdateProductCategoryTest">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -173,22 +173,22 @@
       <TestRunner directory="$PROJECT_DIR$/app/Http/Controllers/Api/Auth" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="CreateProductCategory" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP Lib" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\Api\Authentication\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LoginTest.php" scope="Class" />
+      <TestRunner class="Tests\Feature\Api\Products\CreateProductCategory" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="CreateProductCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP Lib" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\Api\Authentication\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" scope="Class" />
+      <TestRunner class="Tests\Feature\Api\Products\CreateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -197,22 +197,53 @@
           <option name="interpreterName" value="PHP Lib" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\Api\User\RemoveRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/RemoveRoleTest.php" scope="Class" />
+      <TestRunner class="Tests\Feature\Api\User\RemoveRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Users/RemoveRoleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateProductCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Products\UpdateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Products\UpdateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" method="testUpdateProductCategoryWithExistingCategoryName" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Api/Users" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.Auth" />
-      <item itemvalue="PHPUnit.LoginTest" />
-      <item itemvalue="PHPUnit.RegisterTest" />
-      <item itemvalue="PHPUnit.AddRoleTest" />
+      <item itemvalue="PHPUnit.Users" />
+      <item itemvalue="PHPUnit.CreateProductCategory" />
+      <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
+      <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
+      <item itemvalue="PHPUnit.CreateProductCategoryTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.AddRoleTest" />
-        <item itemvalue="PHPUnit.RegisterTest" />
-        <item itemvalue="PHPUnit.LoginTest" />
+        <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
+        <item itemvalue="PHPUnit.CreateProductCategoryTest" />
+        <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
+        <item itemvalue="PHPUnit.CreateProductCategory" />
+        <item itemvalue="PHPUnit.Users" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +260,7 @@
       <workItem from="1603206935601" duration="420000" />
       <workItem from="1603207369497" duration="7710000" />
       <workItem from="1603255427180" duration="20889000" />
-      <workItem from="1603347305021" duration="3948000" />
+      <workItem from="1603347305021" duration="17099000" />
     </task>
     <servers />
   </component>
@@ -260,6 +291,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="327" y="0" width="640" height="680" key="#Auth/0.0.1280.680@0.0.1280.680" timestamp="1603259636590" />
+    <state x="327" y="88" key="#CreateProductCategory" timestamp="1603355392946">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="88" key="#CreateProductCategory/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603355392946" />
+    <state x="327" y="88" key="#CreateProductCategoryTest" timestamp="1603368197966">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="88" key="#CreateProductCategoryTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368197966" />
     <state x="327" y="0" width="640" height="680" key="#LoginTest" timestamp="1603258779490">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -272,23 +311,37 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="327" y="88" key="#RemoveRoleTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603349612003" />
+    <state x="327" y="88" key="#UpdateProductCategoryTest" timestamp="1603366892865">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="72" key="#UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" timestamp="1603367698479">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="72" key="#UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367698479" />
+    <state x="327" y="88" key="#UpdateProductCategoryTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603366892865" />
+    <state x="327" y="105" key="#Users" timestamp="1603352237068">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="105" key="#Users/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603352237067" />
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603348927180">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603348927180" />
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603259647608" />
-    <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser" timestamp="1603273550060">
+    <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser" timestamp="1603363938543">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603273550060" />
+    <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603363938543" />
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1603212340608" />
-    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603263056206">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603365227047">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
+    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603365227047" />
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1603263056206" />
-    <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603207461516">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603354094233">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
+    <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603270262129">
       <screen x="0" y="0" width="1280" height="984" />
@@ -299,34 +352,35 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml/0.0.1280.680@0.0.1280.680" timestamp="1603207593443" />
-    <state x="420" y="94" key="FileChooserDialogImpl" timestamp="1603207359947">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="420" y="136" key="FileChooserDialogImpl" timestamp="1603367814648">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
+    <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom" timestamp="1603351264759">
+    <state width="1281" height="624" key="GridCell.Tab.0.bottom" timestamp="1603368430763">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264759" />
+    <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368430763" />
     <state width="1281" height="624" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.center" timestamp="1603351264758">
+    <state width="1281" height="624" key="GridCell.Tab.0.center" timestamp="1603368430763">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264758" />
+    <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368430763" />
     <state width="1281" height="624" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.left" timestamp="1603351264757">
+    <state width="1281" height="624" key="GridCell.Tab.0.left" timestamp="1603368430763">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264757" />
+    <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368430763" />
     <state width="1281" height="624" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.right" timestamp="1603351264758">
+    <state width="1281" height="624" key="GridCell.Tab.0.right" timestamp="1603368430763">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603351264758" />
+    <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368430763" />
     <state width="1281" height="624" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state x="377" y="90" key="NewPhpClassDialog" timestamp="1603273519953">
+    <state x="377" y="90" key="NewPhpClassDialog" timestamp="1603367446302">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="377" y="90" key="NewPhpClassDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603273519953" />
+    <state x="377" y="90" key="NewPhpClassDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367446302" />
     <state x="377" y="62" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1603212312204" />
     <state x="474" y="263" key="NewPhpFileDialog" timestamp="1603211736946">
       <screen x="0" y="0" width="1280" height="680" />
@@ -336,10 +390,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="587" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603259596651" />
-    <state width="600" height="452" key="javadoc.popup" timestamp="1603275177371">
+    <state width="600" height="452" key="javadoc.popup" timestamp="1603363294039">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="600" height="452" key="javadoc.popup/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603275177371" />
+    <state width="600" height="452" key="javadoc.popup/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603363294039" />
     <state width="600" height="428" key="javadoc.popup/0.0.1280.680@0.0.1280.680" timestamp="1603257415332" />
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog" timestamp="1603350230650">
       <screen x="0" y="0" width="1280" height="984" />
