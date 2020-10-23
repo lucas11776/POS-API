@@ -20,7 +20,10 @@ class Products implements ProductsInterface
 
     public function updateCategory(ProductsCategory $category, string $name): ProductsCategory
     {
-        // TODO: Implement updateCategory() method.
+        $category->name = $name;
+        $category->url = Str::slug($name);
+        $category->save();
+        return $category;
     }
 
     public function deleteCategory(ProductsCategory $category): void

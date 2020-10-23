@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Api\Products;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\CreateCategoryRequest;
+use App\Http\Requests\Product\UpdateCategoryRequest;
 use App\Logic\Products;
-use Illuminate\Http\Request;
+use App\ProductsCategory;
 
 class CategoryController extends Controller
 {
@@ -26,8 +27,10 @@ class CategoryController extends Controller
         return response()->json($category);
     }
 
-    public function update()
+    public function update(ProductsCategory $category, UpdateCategoryRequest $request)
     {
-        dd('Updating product category');
+        $category = $this->products->updateCategory($category, $request->get('name'));
+
+        return response()->json($category);
     }
 }
