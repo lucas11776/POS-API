@@ -28,6 +28,8 @@ class Products implements ProductsInterface
 
     public function deleteCategory(ProductsCategory $category): void
     {
-        // TODO: Implement deleteCategory() method.
+        // TODO: Delete all category id from products
+
+        $category->delete();
     }
 }

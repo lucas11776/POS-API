@@ -33,4 +33,11 @@ class CategoryController extends Controller
 
         return response()->json($category);
     }
+
+    public function delete(ProductsCategory $category)
+    {
+        $this->products->deleteCategory($category);
+
+        return response()->json(['message' => 'Product category has been delete.']);
+    }
 }

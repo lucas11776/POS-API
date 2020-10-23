@@ -32,6 +32,7 @@ Route::prefix('products')->namespace('products')->group(function () {
         Route::post('', 'CategoryController@Create')->middleware(['isUser', 'isAdministrator']);
         Route::prefix('{productsCategory}')->group(function () {
             Route::match(['PATCH','UPDATE'],'', 'CategoryController@Update')->middleware(['isUser', 'isAdministrator']);
+            Route::delete('', 'CategoryController@Delete')->middleware(['isUser', 'isAdministrator']);
         });
     });
 });

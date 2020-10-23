@@ -11,14 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/UpdateCategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/DeleteProductCategoryTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProductsCategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductsCategoriesFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +151,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.DeleteProductCategoryTest">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -181,6 +177,15 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\Api\Products\CreateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductCategoryTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DeleteProductCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Products\DeleteProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/DeleteProductCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -210,32 +215,23 @@
       <TestRunner class="Tests\Feature\Api\Products\UpdateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" method="testUpdateProductCategoryWithExistingCategoryName" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="Users" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP Lib" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature/Api/Users" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.Auth" />
-      <item itemvalue="PHPUnit.Users" />
       <item itemvalue="PHPUnit.CreateProductCategory" />
       <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
       <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
       <item itemvalue="PHPUnit.CreateProductCategoryTest" />
+      <item itemvalue="PHPUnit.DeleteProductCategoryTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.DeleteProductCategoryTest" />
         <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
         <item itemvalue="PHPUnit.CreateProductCategoryTest" />
         <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
         <item itemvalue="PHPUnit.CreateProductCategory" />
-        <item itemvalue="PHPUnit.Users" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +249,7 @@
       <workItem from="1603207369497" duration="7710000" />
       <workItem from="1603255427180" duration="20889000" />
       <workItem from="1603347305021" duration="21608000" />
-      <workItem from="1603450948407" duration="604000" />
+      <workItem from="1603450948407" duration="1926000" />
     </task>
     <servers />
   </component>
@@ -292,6 +288,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="327" y="88" key="#CreateProductCategoryTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603368197966" />
+    <state x="327" y="0" width="640" height="680" key="#DeleteProductCategoryTest" timestamp="1603475633426">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="327" y="0" width="640" height="680" key="#DeleteProductCategoryTest/0.0.1280.680@0.0.1280.680" timestamp="1603475633426" />
     <state x="327" y="0" width="640" height="680" key="#LoginTest" timestamp="1603258779490">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -350,26 +350,26 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom" timestamp="1603379664252">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="334" height="552" key="GridCell.Tab.0.bottom" timestamp="1603475826611">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664252" />
-    <state width="1281" height="624" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.center" timestamp="1603379664251">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="334" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603475826611" />
+    <state width="334" height="552" key="GridCell.Tab.0.center" timestamp="1603475826610">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="1281" height="624" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.left" timestamp="1603379664251">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="334" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603475826610" />
+    <state width="334" height="552" key="GridCell.Tab.0.left" timestamp="1603475826610">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="1281" height="624" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
-    <state width="1281" height="624" key="GridCell.Tab.0.right" timestamp="1603379664251">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state width="334" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603475826610" />
+    <state width="334" height="552" key="GridCell.Tab.0.right" timestamp="1603475826610">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="1281" height="624" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603300539641" />
+    <state width="334" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603475826610" />
     <state x="377" y="90" key="NewPhpClassDialog" timestamp="1603367446302">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
