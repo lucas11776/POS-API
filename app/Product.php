@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Product extends Model
 {
@@ -13,7 +16,16 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'products_category', 'name', 'url', 'price', 'discount', 'in_stock', 'barcode', 'details'
+        'category_id', 'name', 'url', 'price', 'discount', 'in_stock', 'barcode', 'description'
+    ];
+
+    /**
+     * The relations to eager load on every query.
+     *
+     * @var array
+     */
+    protected $with = [
+        'category', 'image', 'images'
     ];
 
     /**
@@ -23,6 +35,26 @@ class Product extends Model
      */
     public function category(): BelongsTo
     {
-        return $this->belongsTo(ProductsCategory::class);
+        return $this->belongsTo(ProductsCategory::class, 'category_id', 'id');
+    }
+
+    /**
+     * Get product image
+     *
+     * @return MorphOne
+     */
+    public function image(): MorphOne
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+    /**
+     * Get product images preview.
+     *
+     * @return MorphMany
+     */
+    public function images(): MorphMany
+    {
+        return $this->morphMany(Image::class, 'imageable');
     }
 }
