@@ -14,28 +14,40 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('auth')->namespace('authentication')->group(function () {
-    Route::post('register', 'AuthController@Register')->middleware(['isGuest']);
-    Route::post('login', 'AuthController@Login')->middleware(['isGuest']);
+    Route::post('register', 'AuthController@Register')
+        ->middleware(['isGuest']);
+    Route::post('login', 'AuthController@Login')
+        ->middleware(['isGuest']);
 });
 
 Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(function () {
     Route::prefix('{user}')->group(function() {
         Route::prefix('role')->group(function() {
-            Route::post('', 'RoleController@Add')->middleware(['isAdministrator']);
-            Route::delete('', 'RoleController@Remove')->middleware(['isAdministrator']);
+            Route::post('', 'RoleController@Add')
+                ->middleware(['isAdministrator']);
+            Route::delete('', 'RoleController@Remove')
+                ->middleware(['isAdministrator']);
         });
     });
 });
 
 Route::prefix('products')->namespace('products')->group(function () {
     Route::prefix('')->group(function () {
-        Route::post('', 'ProductController@Create')->middleware(['isUser', 'isAdministrator']);
+        Route::post('', 'ProductController@Create')
+            ->middleware(['isUser', 'isAdministrator']);
+        Route::prefix('{product}')->group(function () {
+            Route::match(['UPDATE','PATCH'], '', 'ProductController@Update')
+                ->middleware(['isUser', 'isAdministrator']);
+        });
     });
     Route::prefix('categories')->group(function () {
-        Route::post('', 'CategoryController@Create')->middleware(['isUser', 'isAdministrator']);
+        Route::post('', 'CategoryController@Create')
+            ->middleware(['isUser', 'isAdministrator']);
         Route::prefix('{productsCategory}')->group(function () {
-            Route::match(['PATCH','UPDATE'],'', 'CategoryController@Update')->middleware(['isUser', 'isAdministrator']);
-            Route::delete('', 'CategoryController@Delete')->middleware(['isUser', 'isAdministrator']);
+            Route::match(['PATCH','UPDATE'],'', 'CategoryController@Update')
+                ->middleware(['isUser', 'isAdministrator']);
+            Route::delete('', 'CategoryController@Delete')
+                ->middleware(['isUser', 'isAdministrator']);
         });
     });
 });

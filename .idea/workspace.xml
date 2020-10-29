@@ -11,15 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/CreateProductRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Logic/ProductInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Product/CreateProductTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Product/UpdateProductRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Product/UpdateProductTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_22_073310_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_22_073310_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,6 +146,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -157,7 +155,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.UpdateProductTest">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -212,13 +210,13 @@
       <TestRunner class="Tests\Feature\Api\Products\UpdateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="UpdateProductTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP Lib" />
         </PhpTestInterpreterSettings>
       </CommandLine>
-      <TestRunner class="Tests\Feature\Api\Products\UpdateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductCategoryTest.php" method="testUpdateProductCategoryWithExistingCategoryName" scope="Method" />
+      <TestRunner class="Tests\Feature\Api\Product\UpdateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Product/UpdateProductTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <list>
@@ -226,18 +224,18 @@
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.Auth" />
       <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
-      <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
       <item itemvalue="PHPUnit.CreateProductCategoryTest" />
       <item itemvalue="PHPUnit.DeleteProductCategoryTest" />
       <item itemvalue="PHPUnit.CreateProductTest" />
+      <item itemvalue="PHPUnit.UpdateProductTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UpdateProductTest" />
         <item itemvalue="PHPUnit.CreateProductTest" />
         <item itemvalue="PHPUnit.DeleteProductCategoryTest" />
         <item itemvalue="PHPUnit.UpdateProductCategoryTest" />
         <item itemvalue="PHPUnit.CreateProductCategoryTest" />
-        <item itemvalue="PHPUnit.UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +255,8 @@
       <workItem from="1603347305021" duration="21608000" />
       <workItem from="1603450948407" duration="2583000" />
       <workItem from="1603520739694" duration="3460000" />
-      <workItem from="1603814621610" duration="14695000" />
+      <workItem from="1603814621610" duration="15309000" />
+      <workItem from="1603972001406" duration="5073000" />
     </task>
     <servers />
   </component>
@@ -288,6 +287,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="327" y="0" width="640" height="680" key="#Auth/0.0.1280.680@0.0.1280.680" timestamp="1603259636590" />
+    <state x="227" y="0" key="#CLI_Interpreters" timestamp="1603972366546">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="227" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1603972366546" />
     <state x="327" y="88" key="#CreateProductCategory" timestamp="1603355392946">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -324,6 +327,10 @@
     </state>
     <state x="327" y="72" key="#UpdateProductCategoryTest.testUpdateProductCategoryWithExistingCategoryName/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367698479" />
     <state x="327" y="88" key="#UpdateProductCategoryTest/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603366892865" />
+    <state x="327" y="0" width="640" height="680" key="#UpdateProductTest" timestamp="1603972368796">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="327" y="0" width="640" height="680" key="#UpdateProductTest/0.0.1280.680@0.0.1280.680" timestamp="1603972368796" />
     <state x="327" y="105" key="#Users" timestamp="1603352237068">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -348,11 +355,11 @@
     </state>
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
-    <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603377389754">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603984127946">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377389754" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603258832873" />
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603984127946" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -362,26 +369,26 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="341" height="552" key="GridCell.Tab.0.bottom" timestamp="1603897593054">
+    <state width="337" height="552" key="GridCell.Tab.0.bottom" timestamp="1603984447498">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664252" />
-    <state width="341" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603897593054" />
-    <state width="341" height="552" key="GridCell.Tab.0.center" timestamp="1603897593054">
+    <state width="337" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603984447498" />
+    <state width="337" height="552" key="GridCell.Tab.0.center" timestamp="1603984447497">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="341" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603897593054" />
-    <state width="341" height="552" key="GridCell.Tab.0.left" timestamp="1603897593053">
+    <state width="337" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603984447497" />
+    <state width="337" height="552" key="GridCell.Tab.0.left" timestamp="1603984447497">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="341" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603897593053" />
-    <state width="341" height="552" key="GridCell.Tab.0.right" timestamp="1603897593054">
+    <state width="337" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603984447497" />
+    <state width="337" height="552" key="GridCell.Tab.0.right" timestamp="1603984447497">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1281" height="624" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603379664251" />
-    <state width="341" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603897593054" />
+    <state width="337" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603984447497" />
     <state x="377" y="62" key="NewPhpClassDialog" timestamp="1603817058596">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -391,6 +398,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="474" y="263" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603816648255" />
+    <state x="141" y="0" key="SettingsEditor" timestamp="1603983611210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603983611210" />
     <state x="0" y="0" width="587" height="680" key="find.popup" timestamp="1603259596651">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -404,10 +415,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603350230650" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1603815778083">
+    <state x="296" y="150" key="run.anything.popup" timestamp="1603984360566">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603815778083" />
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603984360566" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603820043587">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api\Products;
 
+use App\Http\Requests\Product\UpdateProductRequest;
+use App\Product as Model;
 use App\Http\Requests\Product\CreateProductRequest;
 use App\Http\Controllers\Controller;
 use App\Logic\Product;
@@ -21,6 +23,13 @@ class ProductController extends Controller
     public function create(CreateProductRequest $request)
     {
         $product = $this->product->add($request->validated());
+
+        return response()->json($product);
+    }
+
+    public function update(Model $product, UpdateProductRequest $request)
+    {
+        $product = $this->product->update($product, $request->validated());
 
         return response()->json($product);
     }

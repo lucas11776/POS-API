@@ -248,7 +248,7 @@ class CreateProductTest extends TestCase
             'price' => $this->faker->numberBetween(1800, 2200),
             'discount' => $this->faker->numberBetween(1200, 1600),
             'in_stock' => $this->faker->numberBetween(3, 20),
-            'description' => $this->faker->sentence(3500)
+            'description' => $this->faker->sentence(3800)
         ];
 
         $this->createProduct($product)

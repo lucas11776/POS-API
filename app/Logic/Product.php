@@ -31,9 +31,13 @@ class Product implements ProductInterface
         return $product::where(['id' => $product->id])->firstOrFail();
     }
 
-    public function update(Model $product, array $form): Model
+    public function update(Model $product, array $data): Model
     {
-        // TODO: Implement update() method.
+        if(isset($data['name']))
+            $data['url'] = Str::slug($data['name']);
+        // TODO: Change save to foreach loop
+        $product->update($data);
+        return $product->refresh();
     }
 
     public function delete(Model $product): void
