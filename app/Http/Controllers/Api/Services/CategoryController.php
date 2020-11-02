@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Api\Services;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Service\CreateCategoryRequest;
+use App\Http\Requests\Service\UpdateCategoryRequest;
 use App\Logic\Services;
+use App\ServicesCategory;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -22,6 +24,13 @@ class CategoryController extends Controller
     public function create(CreateCategoryRequest $request)
     {
         $category = $this->services->createCategory($request->validated());
+
+        return response()->json($category);
+    }
+
+    public function update(ServicesCategory $category, UpdateCategoryRequest $request)
+    {
+        $category = $this->services->updateCategory($category, $request->validated());
 
         return response()->json($category);
     }

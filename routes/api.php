@@ -58,5 +58,9 @@ Route::prefix('services')->namespace('services')->group(function () {
     Route::prefix('categories')->group(function () {
         Route::post('', 'CategoryController@Create')
             ->middleware(['isUser', 'isAdministrator']);
+        Route::prefix('{servicesCategory}')->group(function () {
+            Route::match(['UPDATE','PATCH'], '', 'CategoryController@Update')
+                ->middleware(['isUser','isAdministrator']);
+        });
     });
 });

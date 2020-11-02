@@ -32,6 +32,8 @@ class CreateServiceCategoryTest extends TestCase
         $this->createCategory($category)
             ->assertOk()
             ->assertJsonStructure(['name', 'url']);
+
+        $this->assertDatabaseHas('services_categories', $category);
     }
 
     public function testCreateServiceCategoryWithEmptyData()

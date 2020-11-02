@@ -19,7 +19,10 @@ class Services implements ServicesInterface
 
     public function updateCategory(ServicesCategory $category, array $data): ServicesCategory
     {
-        // TODO: Implement updateCategory() method.
+        $category->name = $data['name'];
+        $category->url = Str::slug($data['name']);
+        $category->save();
+        return $category;
     }
 
     public function deleteCategory(ServicesCategory $category): void
