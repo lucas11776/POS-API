@@ -27,6 +27,6 @@ class Services implements ServicesInterface
 
     public function deleteCategory(ServicesCategory $category): void
     {
-        // TODO: Implement deleteCategory() method.
+        $category->delete();
     }
 }
