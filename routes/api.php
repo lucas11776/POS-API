@@ -38,6 +38,8 @@ Route::prefix('products')->namespace('products')->group(function () {
         Route::prefix('{product}')->group(function () {
             Route::match(['UPDATE','PATCH'], '', 'ProductController@Update')
                 ->middleware(['isUser', 'isAdministrator']);
+            Route::delete('', 'ProductController@Delete')
+                ->middleware(['isUser', 'isAdministrator']);
         });
     });
     Route::prefix('categories')->group(function () {

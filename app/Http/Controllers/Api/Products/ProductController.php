@@ -33,4 +33,11 @@ class ProductController extends Controller
 
         return response()->json($product);
     }
+
+    public function delete(Model $product)
+    {
+        $this->product->delete($product);
+
+        return response()->json(['message' => 'Product has been delete successfully']);
+    }
 }

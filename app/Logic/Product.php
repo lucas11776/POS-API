@@ -35,14 +35,18 @@ class Product implements ProductInterface
     {
         if(isset($data['name']))
             $data['url'] = Str::slug($data['name']);
-        // TODO: Change save to foreach loop
-        $product->update($data);
-        return $product->refresh();
+
+        foreach ($data as $key => $value)
+            $product->{$key} = $value;
+
+        $product->save();
+
+        return $product;
     }
 
     public function delete(Model $product): void
     {
-        // TODO: Implement delete() method.
+        $product->delete();
     }
 
     protected function create(array $product): Model

@@ -44,13 +44,15 @@ class UpdateProductRequest extends FormRequest
                 'nullable', 'numeric'
             ],
             'description' => [
-                'required', 'string', function ($key, $value, $fail) {
-                    $textArray = explode(' ', strip_tags($value));
-                    if(count($textArray) > 2500) {
-                        $fail("The {$key} most not exceed maximum words of 2500.");
-                    }
-                }
+                'required', 'string', 'words:1500'
             ]
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'words' => 'The :attributes must have maximum of 1500 characters.'
         ];
     }
 }
