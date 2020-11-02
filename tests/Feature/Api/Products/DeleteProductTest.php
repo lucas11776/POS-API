@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Feature\Api\Product;
+namespace Tests\Feature\Api\Products;
 
 use App\User;
 use App\Product;
 use Illuminate\Foundation\Testing\TestResponse;
-use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class DeleteProductTest extends TestCase
 {
@@ -15,13 +15,13 @@ class DeleteProductTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()->create(['name' => 'administrator']);
+        $this->user = $this->getAdministrator();
     }
 
     public function testDeleteProduct()

@@ -7,6 +7,7 @@ use Faker\Factory;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class LoginTest extends TestCase
 {
@@ -20,13 +21,15 @@ class LoginTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
         $this->faker = Factory::create();
 
-        $this->user = factory(User::class)->create();
+        $this->user = $this->getUser();
     }
 
     public function testLoginWithEmailAddress()

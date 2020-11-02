@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class CreateProductCategoryTest extends TestCase
 {
@@ -17,13 +18,13 @@ class CreateProductCategoryTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()->create(['name' => 'administrator']);
+        $this->user = $this->getAdministrator();
     }
 
     public function testCreateProductCategory()

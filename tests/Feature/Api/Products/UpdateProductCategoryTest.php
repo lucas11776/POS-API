@@ -8,6 +8,7 @@ use Faker\Factory;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class UpdateProductCategoryTest extends TestCase
 {
@@ -16,13 +17,13 @@ class UpdateProductCategoryTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()->create(['name' => 'administrator']);
+        $this->user = $this->getAdministrator();
     }
 
     public function testUpdateProductCategory()

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Api\Product;
+namespace Tests\Feature\Api\Products;
 
 use App\Logic\Product;
 use App\ProductsCategory;
@@ -12,6 +12,7 @@ use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class CreateProductTest extends TestCase
 {
@@ -25,15 +26,15 @@ class CreateProductTest extends TestCase
      */
     protected $faker;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
         $this->faker = Factory::create();
 
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()->create(['name' => 'administrator']);
+        $this->user = $this->getAdministrator();
     }
 
     public function testCreateProduct()

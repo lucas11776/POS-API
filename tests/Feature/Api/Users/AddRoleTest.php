@@ -1,12 +1,13 @@
 <?php
 
-namespace Tests\Feature\Api\User;
+namespace Tests\Feature\Api\Users;
 
 use App\Role;
 use App\User;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class AddRoleTest extends TestCase
 {
@@ -15,23 +16,18 @@ class AddRoleTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        Role::insert(array_map(function ($item) {
-            return ['name' => $item];
-        }, Role::ROLES));
-
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()
-            ->attach(Role::where(['name' => 'administrator'])->first());
+        $this->user = $this->getAdministrator();
     }
 
     public function testAddRole()
     {
-        $user = factory(User::class)->create();
+        $user = $this->getUser();
         $role = ['name' => 'employee'];
 
         $this->addRole($user, $role)
@@ -45,7 +41,7 @@ class AddRoleTest extends TestCase
 
     public function testAddRoleWithEmptyRole()
     {
-        $user = factory(User::class)->create();
+        $user = $this->getUser();
         $role = [];
 
         $this->addRole($user, $role)
@@ -55,10 +51,8 @@ class AddRoleTest extends TestCase
 
     public function testAddExistingUserRole()
     {
-        $user = factory(User::class)->create();
+        $user = $this->getEmployee();
         $role = ['name' => 'employee'];
-
-        $user->roles()->attach(Role::where($role)->firstOrFail());
 
         $this->addRole($user, $role)
             ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)

@@ -6,6 +6,7 @@ use App\ProductsCategory;
 use App\User;
 use Illuminate\Foundation\Testing\TestResponse;
 use Tests\TestCase;
+use Tests\Tools\Users;
 
 class DeleteProductCategoryTest extends TestCase
 {
@@ -14,13 +15,13 @@ class DeleteProductCategoryTest extends TestCase
      */
     protected $user;
 
+    use Users;
+
     public function setUp(): void
     {
         parent::setUp();
 
-        $this->user = factory(User::class)->create();
-
-        $this->user->roles()->create(['name' => 'administrator']);
+        $this->user = $this->getAdministrator();
     }
 
     public function testDeleteProductCategory()

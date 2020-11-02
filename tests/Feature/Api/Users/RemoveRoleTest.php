@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Api\User;
+namespace Tests\Feature\Api\Users;
 
 use App\Role;
 use App\User;
