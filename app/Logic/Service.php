@@ -40,7 +40,13 @@ class Service implements ServiceInterface
 
     public function update(Model $service, array $data): Model
     {
-        // TODO: Implement update() method.
+        if(isset($data['name']))
+            $data['url'] = Str::slug($data['name']);
+
+        $service->fill($data);
+        $service->save();
+
+        return $service;
     }
 
     public function delete(Model $service): void
