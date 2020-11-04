@@ -55,6 +55,8 @@ Route::prefix('products')->namespace('products')->group(function () {
 });
 
 Route::prefix('services')->namespace('services')->group(function () {
+    Route::post('', 'ServiceController@Store')
+        ->middleware(['isUser','isAdministrator']);
     Route::prefix('categories')->group(function () {
         Route::post('', 'CategoryController@Create')
             ->middleware(['isUser', 'isAdministrator']);

@@ -2,11 +2,8 @@
 
 namespace App\Logic;
 
-use App\Image;
+use App\Logic\Image as ImageLogic;
 use App\Product as Model;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class Product implements ProductInterface
@@ -18,17 +15,29 @@ class Product implements ProductInterface
      */
     public const IMAGE_STORAGE = 'products';
 
+    /**
+     * @var Upload
+     */
+    public $upload;
+
+    /**
+     * @var ImageLogic
+     */
+    public $image;
+
+    public function __construct(Upload $upload, ImageLogic $image)
+    {
+        $this->upload = $upload;
+        $this->image = $image;
+    }
+
     public function add(array $form): Model
     {
         $product = $this->create($form);
-        $imagePath = $this->uploadImage($form['image']);
-        $imagesPath = $this->uploadImages($form['images'] ?? []);
 
-        $this->createImage($product, $imagePath);
-        $this->createImages($product, $imagesPath);
+        $this->createImages($product, $form);
 
-        // get product with all product relationships
-        return $product::where(['id' => $product->id])->firstOrFail();
+        return Model::query()->find($product)->first();
     }
 
     public function update(Model $product, array $data): Model
@@ -36,9 +45,7 @@ class Product implements ProductInterface
         if(isset($data['name']))
             $data['url'] = Str::slug($data['name']);
 
-        foreach ($data as $key => $value)
-            $product->{$key} = $value;
-
+        $product->fill($data);
         $product->save();
 
         return $product;
@@ -49,49 +56,23 @@ class Product implements ProductInterface
         $product->delete();
     }
 
-    protected function create(array $product): Model
+    protected function create(array $data): Model
     {
-        return Model::create([
-            'category_id' => isset($product['category_id']) ? $product['category_id'] : null,
-            'name' => $product['name'],
-            'url' => Str::slug($product['name']),
-            'price' => $product['price'],
-            'discount' => $product['discount'],
-            'in_stock' => isset($product['category_id']) ? $product['category_id'] : null,
-            'barcode' => isset($product['in_stock']) ? $product['in_stock'] : null,
-            'description' => $product['description']
-        ]);
+        $data['url'] = Str::slug($data['name']);
+
+        $product = (new Model())->fill($data);
+
+        $product->save();
+
+        return $product;
     }
 
-    protected function uploadImage(UploadedFile $image): string
+    protected function createImages(Model $product, array $data): void
     {
-        $path = $image->storePublicly(self::IMAGE_STORAGE);
-        return Storage::url($path);
-    }
+        $mainImage = $this->upload->upload($data['image'], self::IMAGE_STORAGE);
+        $previewImages = $this->upload->uploads($data['images'] ?? [], self::IMAGE_STORAGE);
 
-    protected function uploadImages(array $images = []): array
-    {
-        $array = [];
-        foreach ($images as $image)
-            $array[] = $this->uploadImage($image);
-        return $array;
-    }
-
-    protected function createImage(Model $product, string $path): Image
-    {
-        return $product->image()->create([
-            'path' => $path,
-            'url' => url($path)
-        ]);
-    }
-
-    protected function createImages(Model $product, array $images): Collection
-    {
-        return $product->images()->createMany(array_map(function (string $path) {
-            return [
-                'path' => $path,
-                'url' => url($path)
-            ];
-        }, $images));
+        $this->image->createImage($product->image(), $mainImage);
+        $this->image->createImages($product->images(), $previewImages);
     }
 }

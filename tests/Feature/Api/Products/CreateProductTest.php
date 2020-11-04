@@ -65,6 +65,8 @@ class CreateProductTest extends TestCase
             ->assertOk()
             ->assertJsonStructure(array_keys($product));
 
+        $this->assertDatabaseHas('products', ['name' => $product['name']]);
+
         Storage::assertExists(Product::IMAGE_STORAGE . '/' . $product['image']->hashName());
 
         foreach ($product['images'] as $image)
