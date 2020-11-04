@@ -33,4 +33,11 @@ class ServiceController extends Controller
 
         return response()->json($service);
     }
+
+    public function delete(Model $service)
+    {
+        $this->service->delete($service);
+
+        return response()->json(['message' => 'Service has been delete.']);
+    }
 }

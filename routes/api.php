@@ -60,6 +60,8 @@ Route::prefix('services')->namespace('services')->group(function () {
     Route::prefix('{service}')->group(function () {
         Route::match(['UPDATE','PATCH'],'', 'ServiceController@Update')
             ->middleware(['isUser','isAdministrator']);
+        Route::delete('', 'ServiceController@Delete')
+            ->middleware(['isUser','isAdministrator']);
     });
     Route::prefix('categories')->group(function () {
         Route::post('', 'CategoryController@Create')

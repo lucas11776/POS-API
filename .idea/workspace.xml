@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Services/UpdateServiceTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ServiceFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ServiceFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Services/DeleteServiceTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UpdateServiceTest">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -240,7 +238,7 @@
       <workItem from="1603814621610" duration="15309000" />
       <workItem from="1603972001406" duration="10159000" />
       <workItem from="1604131865994" duration="474000" />
-      <workItem from="1604318001827" duration="30034000" />
+      <workItem from="1604318001827" duration="32923000" />
     </task>
     <servers />
   </component>
@@ -359,11 +357,11 @@
     </state>
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604484291520">
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604504460282">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377389754" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604484291520" />
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604504460282" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -373,26 +371,26 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="312" height="552" key="GridCell.Tab.0.bottom" timestamp="1604502828539">
+    <state width="337" height="552" key="GridCell.Tab.0.bottom" timestamp="1604505438712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="312" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604502828539" />
-    <state width="312" height="552" key="GridCell.Tab.0.center" timestamp="1604502828539">
+    <state width="337" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604505438712" />
+    <state width="337" height="552" key="GridCell.Tab.0.center" timestamp="1604505438712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="312" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604502828539" />
-    <state width="312" height="552" key="GridCell.Tab.0.left" timestamp="1604502828534">
+    <state width="337" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604505438712" />
+    <state width="337" height="552" key="GridCell.Tab.0.left" timestamp="1604505438712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="312" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604502828534" />
-    <state width="312" height="552" key="GridCell.Tab.0.right" timestamp="1604502828539">
+    <state width="337" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604505438712" />
+    <state width="337" height="552" key="GridCell.Tab.0.right" timestamp="1604505438712">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="312" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604502828539" />
+    <state width="337" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604505438712" />
     <state width="1237" height="195" key="GridCell.Tab.1.bottom" timestamp="1604326580431">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -435,10 +433,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603350230650" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1604328604632">
+    <state x="296" y="150" key="run.anything.popup" timestamp="1604504703516">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1604328604632" />
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1604504703516" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603820043587">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

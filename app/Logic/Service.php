@@ -51,7 +51,7 @@ class Service implements ServiceInterface
 
     public function delete(Model $service): void
     {
-        // TODO: Implement delete() method.
+        $service->delete();
     }
 
     protected function create($data): Model
