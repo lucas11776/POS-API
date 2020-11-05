@@ -20,6 +20,12 @@ Route::prefix('auth')->namespace('authentication')->group(function () {
         ->middleware(['isGuest']);
 });
 
+Route::prefix('user')->namespace('user')->group(function () {
+    Route::prefix('forgot')->group(function () {
+        Route::post('password', 'ForgotPasswordController@Index');
+    });
+});
+
 Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(function () {
     Route::prefix('{user}')->group(function() {
         Route::prefix('role')->group(function() {
