@@ -7,20 +7,17 @@ use Illuminate\Support\Facades\Storage;
 
 class Upload implements UploadInterface
 {
-    public function uploads(array $files, string $storage = 'public'): array
+    public function uploads(array $files, string $storage = 'public', string $visibility = 'public'): array
     {
         $paths = [];
-
         foreach ($files as $file)
-            $paths[] = $this->upload($file, $storage);
-
+            $paths[] = $this->upload($file, $storage, $visibility);
         return $paths;
     }
 
-    public function upload(UploadedFile $file, string $storage = 'public'): string
+    public function upload(UploadedFile $file, string $storage = 'public', string $visibility = 'public'): string
     {
-        $path = $file->storePublicly($storage);
-
+        $path = $file->store($storage, ['visibility' => $visibility]);
         return Storage::url($path);
     }
 }

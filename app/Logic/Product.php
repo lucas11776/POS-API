@@ -37,7 +37,7 @@ class Product implements ProductInterface
 
         $this->createImages($product, $form);
 
-        return Model::query()->find($product)->first();
+        return Model::query()->where('id', $product->id)->first();
     }
 
     public function update(Model $product, array $data): Model

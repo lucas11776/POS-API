@@ -20,6 +20,13 @@ class CategoryController extends Controller
         $this->products = $products;
     }
 
+    public function index()
+    {
+        $categories = $this->products->categories();
+
+        return response()->json($categories);
+    }
+
     public function create(CreateCategoryRequest $request)
     {
         $category = $this->products->createCategory($request->get('name'));

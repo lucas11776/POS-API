@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
@@ -33,11 +34,11 @@ class Product extends Model
     /**
      * Get product category.
      *
-     * @return BelongsTo
+     * @return HasOne
      */
-    public function category(): BelongsTo
+    public function category(): HasOne
     {
-        return $this->belongsTo(ProductsCategory::class, 'category_id', 'id');
+        return $this->hasOne(ProductsCategory::class, 'id', 'category_id');
     }
 
     /**

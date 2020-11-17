@@ -5,9 +5,17 @@ namespace App\Logic;
 
 
 use App\ProductsCategory;
+use Illuminate\Database\Eloquent\Collection;
 
 interface ProductsInterface
 {
+    /**
+     * Get product categories.
+     *
+     * @return Collection
+     */
+    public function categories(): Collection;
+
     /**
      * Added product category.
      *

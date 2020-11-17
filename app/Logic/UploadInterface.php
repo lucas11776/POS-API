@@ -11,16 +11,18 @@ interface UploadInterface
      *
      * @param array $files
      * @param string $storage
+     * @param string $visibility
      * @return array
      */
-    public function uploads(array $files, string $storage = 'public'): array;
+    public function uploads(array $files, string $storage = 'public', string $visibility = 'public'): array;
 
     /**
      * Upload file in storage.
      *
      * @param UploadedFile $file
      * @param string $storage
+     * @param string $visibility
      * @return string
      */
-    public function upload(UploadedFile $file, string $storage = 'public'): string;
+    public function upload(UploadedFile $file, string $storage = 'public', string $visibility = 'public'): string;
 }

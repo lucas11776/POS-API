@@ -5,10 +5,17 @@ namespace App\Logic;
 
 
 use App\ProductsCategory;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Str;
 
 class Products implements ProductsInterface
 {
+    public function categories(): Collection
+    {
+        return ProductsCategory::query()
+            ->orderBy('name', 'ASC')
+            ->get();
+    }
 
     public function createCategory(string $name): ProductsCategory
     {
@@ -29,7 +36,6 @@ class Products implements ProductsInterface
     public function deleteCategory(ProductsCategory $category): void
     {
         // TODO: Delete all category id from products
-
         $category->delete();
     }
 }

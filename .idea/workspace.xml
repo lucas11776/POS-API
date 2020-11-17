@@ -11,22 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/ForgotPasswordRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/PasswordReset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/ForgotPasswordTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Authentication/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Authentication/LoginRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/RegexExpresses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/RegexExpresses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Upload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/UploadInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/UploadInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +163,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+  <component name="RunManager" selected="PHPUnit.CreateProductTest.testCreateProduct">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -180,8 +177,8 @@
       <TestRunner class="Tests\Feature\Api\Products\CreateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\CreateServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/CreateServiceTest.php" scope="Class" />
+    <configuration name="CreateProductTest.testCreateProduct" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Products\CreateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductTest.php" method="testCreateProduct" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="DeleteServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -190,6 +187,10 @@
     </configuration>
     <configuration name="ForgotPasswordTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Api\User\ForgotPasswordTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/ForgotPasswordTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetProductsCategoriesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Products\GetProductsCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -210,28 +211,24 @@
       <TestRunner class="Tests\Feature\Api\Product\UpdateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\UpdateServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/UpdateServiceTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="PHPUnit.UpdateProductTest" />
-      <item itemvalue="PHPUnit.RemoveRoleTest" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.Auth" />
-      <item itemvalue="PHPUnit.CreateServiceTest" />
-      <item itemvalue="PHPUnit.CreateProductTest" />
-      <item itemvalue="PHPUnit.UpdateServiceTest" />
+      <item itemvalue="PHPUnit.RemoveRoleTest" />
+      <item itemvalue="PHPUnit.UpdateProductTest" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.DeleteServiceTest" />
       <item itemvalue="PHPUnit.ForgotPasswordTest" />
+      <item itemvalue="PHPUnit.GetProductsCategoriesTest" />
+      <item itemvalue="PHPUnit.CreateProductTest" />
+      <item itemvalue="PHPUnit.CreateProductTest.testCreateProduct" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateProductTest.testCreateProduct" />
+        <item itemvalue="PHPUnit.CreateProductTest" />
+        <item itemvalue="PHPUnit.GetProductsCategoriesTest" />
         <item itemvalue="PHPUnit.ForgotPasswordTest" />
         <item itemvalue="PHPUnit.DeleteServiceTest" />
-        <item itemvalue="PHPUnit.UpdateServiceTest" />
-        <item itemvalue="PHPUnit.CreateServiceTest" />
-        <item itemvalue="PHPUnit.CreateProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -254,7 +251,14 @@
       <workItem from="1603814621610" duration="15309000" />
       <workItem from="1603972001406" duration="10159000" />
       <workItem from="1604131865994" duration="474000" />
-      <workItem from="1604318001827" duration="39793000" />
+      <workItem from="1604318001827" duration="40431000" />
+      <workItem from="1604828557552" duration="707000" />
+      <workItem from="1605071528795" duration="10000" />
+      <workItem from="1605376453069" duration="151000" />
+      <workItem from="1605426315963" duration="654000" />
+      <workItem from="1605454897808" duration="382000" />
+      <workItem from="1605458346392" duration="15000" />
+      <workItem from="1605542124890" duration="8462000" />
     </task>
     <servers />
   </component>
@@ -387,26 +391,26 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="335" height="552" key="GridCell.Tab.0.bottom" timestamp="1604577964157">
+    <state width="328" height="552" key="GridCell.Tab.0.bottom" timestamp="1605596943741">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="335" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604577964157" />
-    <state width="335" height="552" key="GridCell.Tab.0.center" timestamp="1604577964157">
+    <state width="328" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605596943741" />
+    <state width="328" height="552" key="GridCell.Tab.0.center" timestamp="1605596943740">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="335" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604577964157" />
-    <state width="335" height="552" key="GridCell.Tab.0.left" timestamp="1604577964157">
+    <state width="328" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605596943740" />
+    <state width="328" height="552" key="GridCell.Tab.0.left" timestamp="1605596943740">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="335" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604577964157" />
-    <state width="335" height="552" key="GridCell.Tab.0.right" timestamp="1604577964157">
+    <state width="328" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605596943740" />
+    <state width="328" height="552" key="GridCell.Tab.0.right" timestamp="1605596943741">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="335" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604577964157" />
+    <state width="328" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605596943741" />
     <state width="1237" height="195" key="GridCell.Tab.1.bottom" timestamp="1604326580431">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -449,14 +453,14 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603350230650" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1604504703516">
+    <state x="296" y="150" key="run.anything.popup" timestamp="1605591475443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1604504703516" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603820043587">
+    <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1605591475443" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1605596906653">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603820043587" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605596906653" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

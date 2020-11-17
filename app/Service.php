@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -33,11 +33,11 @@ class Service extends Model
     /**
      * Get service category.
      *
-     * @return BelongsTo
+     * @return HasOne
      */
-    public function category(): BelongsTo
+    public function category(): HasOne
     {
-        return $this->belongsTo(ServicesCategory::class, 'category_id', 'id');
+        return $this->hasOne(ServicesCategory::class, 'id', 'category_id');
     }
 
     /**

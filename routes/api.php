@@ -49,6 +49,7 @@ Route::prefix('products')->namespace('products')->group(function () {
         });
     });
     Route::prefix('categories')->group(function () {
+        Route::get('', 'CategoryController@Index');
         Route::post('', 'CategoryController@Create')
             ->middleware(['isUser', 'isAdministrator']);
         Route::prefix('{productsCategory}')->group(function () {
