@@ -8,11 +8,6 @@ use Tests\TestCase;
 
 class GetProductsCategoriesTest extends TestCase
 {
-    public function setUp(): void
-    {
-        parent::setUp();
-    }
-
     public function testGetProductCategories()
     {
         factory(ProductsCategory::class)->times(10)->create();

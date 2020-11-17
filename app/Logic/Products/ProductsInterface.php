@@ -1,14 +1,24 @@
 <?php
 
-
-namespace App\Logic;
-
+namespace App\Logic\Products;
 
 use App\ProductsCategory;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 interface ProductsInterface
 {
+    public function all(): Collection;
+
+    /**
+     * Get products in database.
+     *
+     * @param string $search
+     * @param int $limit
+     * @return LengthAwarePaginator
+     */
+    public function get(string $search = '', int $limit = 24): LengthAwarePaginator;
+
     /**
      * Get product categories.
      *

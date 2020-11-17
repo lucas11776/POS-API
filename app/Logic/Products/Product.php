@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Logic;
+namespace App\Logic\Products;
 
-use App\Logic\Image as ImageLogic;
+use App\Logic\Upload;
 use App\Product as Model;
+use App\Logic\Image as ImageLogic;
 use Illuminate\Support\Str;
 
 class Product implements ProductInterface

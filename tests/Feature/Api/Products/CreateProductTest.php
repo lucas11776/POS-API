@@ -2,10 +2,10 @@
 
 namespace Tests\Feature\Api\Products;
 
-use App\Logic\Product;
-use App\ProductsCategory;
 use App\User;
 use Faker\Factory;
+use App\Logic\Products\Product;
+use App\ProductsCategory;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 use Illuminate\Http\UploadedFile;

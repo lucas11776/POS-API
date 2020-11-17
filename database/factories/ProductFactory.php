@@ -24,14 +24,14 @@ $factory->define(Product::class, function (Faker $faker) {
     $product->image()->create([
         'path' => $path = Storage::url(UploadedFile::fake()
             ->create('picture.png')
-            ->storePublicly(\App\Logic\Product::IMAGE_STORAGE)),
+            ->storePublicly(\App\Logic\Products\Product::IMAGE_STORAGE)),
         'url' => url($path)
     ]);
     for($i = 0; $i < 3; $i++)
         $product->images()->create([
             'path' => $path = Storage::url(UploadedFile::fake()
                 ->create('picture_' . $i . '.png')
-                ->storePublicly(\App\Logic\Product::IMAGE_STORAGE)),
+                ->storePublicly(\App\Logic\Products\Product::IMAGE_STORAGE)),
             'url' => url($path)
         ]);
 });

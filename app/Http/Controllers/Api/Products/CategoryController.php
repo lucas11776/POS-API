@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api\Products;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\CreateCategoryRequest;
 use App\Http\Requests\Product\UpdateCategoryRequest;
-use App\Logic\Products;
+use App\Logic\Products\Products;
 use App\ProductsCategory;
 
 class CategoryController extends Controller

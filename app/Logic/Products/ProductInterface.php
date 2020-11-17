@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Logic;
+namespace App\Logic\Products;
 
 use App\Product;
 

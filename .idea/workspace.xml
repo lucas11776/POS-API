@@ -11,19 +11,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Tools/Params.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Authentication/LoginRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Authentication/LoginRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/RegexExpresses.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/RegexExpresses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/UploadInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/UploadInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Service.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Products/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/ProductInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products/ProductInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products/Products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/ProductsInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Products/ProductsInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +146,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Constants" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -156,14 +158,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Logic\Products" />
+      <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Logic" />
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\tests\Feature\Api" />
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\tests\Feature\Api\Products" />
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app" />
-      <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Interface" />
-      <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Http\Controllers\Web" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateProductTest.testCreateProduct">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -181,16 +183,16 @@
       <TestRunner class="Tests\Feature\Api\Products\CreateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductTest.php" method="testCreateProduct" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="DeleteServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\DeleteServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/DeleteServiceTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ForgotPasswordTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\User\ForgotPasswordTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/ForgotPasswordTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="GetProductsCategoriesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Api\Products\GetProductsCategoriesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsCategoriesTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetProductsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Products\GetProductsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetProductsTest.testGetProducts" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Products\GetProductsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" method="testGetProducts" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -216,19 +218,19 @@
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.UpdateProductTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.DeleteServiceTest" />
-      <item itemvalue="PHPUnit.ForgotPasswordTest" />
       <item itemvalue="PHPUnit.GetProductsCategoriesTest" />
       <item itemvalue="PHPUnit.CreateProductTest" />
       <item itemvalue="PHPUnit.CreateProductTest.testCreateProduct" />
+      <item itemvalue="PHPUnit.GetProductsTest.testGetProducts" />
+      <item itemvalue="PHPUnit.GetProductsTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.GetProductsTest" />
+        <item itemvalue="PHPUnit.GetProductsTest.testGetProducts" />
         <item itemvalue="PHPUnit.CreateProductTest.testCreateProduct" />
         <item itemvalue="PHPUnit.CreateProductTest" />
         <item itemvalue="PHPUnit.GetProductsCategoriesTest" />
-        <item itemvalue="PHPUnit.ForgotPasswordTest" />
-        <item itemvalue="PHPUnit.DeleteServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +260,7 @@
       <workItem from="1605426315963" duration="654000" />
       <workItem from="1605454897808" duration="382000" />
       <workItem from="1605458346392" duration="15000" />
-      <workItem from="1605542124890" duration="8462000" />
+      <workItem from="1605542124890" duration="17401000" />
     </task>
     <servers />
   </component>
@@ -362,6 +364,10 @@
     </state>
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603348927180" />
     <state x="94" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604324491805" />
+    <state x="92" y="92" width="1096" height="496" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1605619888733">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="92" y="92" width="1096" height="496" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1605619888733" />
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser" timestamp="1604415518168">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -377,11 +383,11 @@
     </state>
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604504460282">
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605618938891">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377389754" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604504460282" />
+    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605618938891" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -391,47 +397,47 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="328" height="552" key="GridCell.Tab.0.bottom" timestamp="1605596943741">
+    <state width="357" height="552" key="GridCell.Tab.0.bottom" timestamp="1605620426870">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="328" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605596943741" />
-    <state width="328" height="552" key="GridCell.Tab.0.center" timestamp="1605596943740">
+    <state width="357" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605620426870" />
+    <state width="357" height="552" key="GridCell.Tab.0.center" timestamp="1605620426870">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="328" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605596943740" />
-    <state width="328" height="552" key="GridCell.Tab.0.left" timestamp="1605596943740">
+    <state width="357" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605620426870" />
+    <state width="357" height="552" key="GridCell.Tab.0.left" timestamp="1605620426869">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="328" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605596943740" />
-    <state width="328" height="552" key="GridCell.Tab.0.right" timestamp="1605596943741">
+    <state width="357" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605620426869" />
+    <state width="357" height="552" key="GridCell.Tab.0.right" timestamp="1605620426870">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="328" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605596943741" />
-    <state width="1237" height="195" key="GridCell.Tab.1.bottom" timestamp="1604326580431">
+    <state width="357" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605620426870" />
+    <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1605597475017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="195" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604326580431" />
-    <state width="1237" height="195" key="GridCell.Tab.1.center" timestamp="1604326580431">
+    <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
+    <state width="1237" height="203" key="GridCell.Tab.1.center" timestamp="1605597475017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="195" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604326580431" />
-    <state width="1237" height="195" key="GridCell.Tab.1.left" timestamp="1604326580430">
+    <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
+    <state width="1237" height="203" key="GridCell.Tab.1.left" timestamp="1605597475017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="195" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604326580430" />
-    <state width="1237" height="195" key="GridCell.Tab.1.right" timestamp="1604326580431">
+    <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
+    <state width="1237" height="203" key="GridCell.Tab.1.right" timestamp="1605597475017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="195" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604326580431" />
-    <state x="377" y="62" key="NewPhpClassDialog" timestamp="1604415491545">
+    <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
+    <state x="377" y="62" key="NewPhpClassDialog" timestamp="1605605400586">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="377" y="90" key="NewPhpClassDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604322004110" />
-    <state x="377" y="62" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1604415491545" />
+    <state x="377" y="62" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1605605400586" />
     <state x="474" y="263" key="NewPhpFileDialog" timestamp="1603816648255">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -440,6 +446,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="141" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603983611210" />
+    <state x="92" y="92" width="1096" height="496" key="dock-window-1" timestamp="1605609496251">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="92" y="92" width="1096" height="496" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1605609496251" />
     <state x="0" y="0" width="587" height="680" key="find.popup" timestamp="1603259596651">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -457,10 +467,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1605591475443" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1605596906653">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1605609175311">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605596906653" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605609175311" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

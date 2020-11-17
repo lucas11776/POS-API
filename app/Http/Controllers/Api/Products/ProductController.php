@@ -6,7 +6,7 @@ use App\Http\Requests\Product\UpdateProductRequest;
 use App\Product as Model;
 use App\Http\Requests\Product\CreateProductRequest;
 use App\Http\Controllers\Controller;
-use App\Logic\Product;
+use App\Logic\Products\Product;
 
 class ProductController extends Controller
 {

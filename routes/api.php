@@ -38,15 +38,15 @@ Route::prefix('users')->namespace('users')->middleware(['isUser'])->group(functi
 });
 
 Route::prefix('products')->namespace('products')->group(function () {
-    Route::prefix('')->group(function () {
-        Route::post('', 'ProductController@Create')
+    Route::get('all', 'ProductsController@All');
+    Route::get('', 'ProductsController@Index');
+    Route::post('', 'ProductController@Create')
+        ->middleware(['isUser', 'isAdministrator']);
+    Route::prefix('{product}')->group(function () {
+        Route::match(['UPDATE','PATCH'], '', 'ProductController@Update')
             ->middleware(['isUser', 'isAdministrator']);
-        Route::prefix('{product}')->group(function () {
-            Route::match(['UPDATE','PATCH'], '', 'ProductController@Update')
-                ->middleware(['isUser', 'isAdministrator']);
-            Route::delete('', 'ProductController@Delete')
-                ->middleware(['isUser', 'isAdministrator']);
-        });
+        Route::delete('', 'ProductController@Delete')
+            ->middleware(['isUser', 'isAdministrator']);
     });
     Route::prefix('categories')->group(function () {
         Route::get('', 'CategoryController@Index');
