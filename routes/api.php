@@ -62,6 +62,8 @@ Route::prefix('products')->namespace('products')->group(function () {
 });
 
 Route::prefix('services')->namespace('services')->group(function () {
+    Route::get('all', 'ServicesController@all');
+    Route::get('', 'ServicesController@Index');
     Route::post('', 'ServiceController@Store')
         ->middleware(['isUser','isAdministrator']);
     Route::prefix('{service}')->group(function () {

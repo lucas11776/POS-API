@@ -10,7 +10,7 @@ class GetAllProductsTest extends TestCase
 {
     public function testGetAllProducts()
     {
-        factory(Product::class)->times(10)->create();
+        factory(Product::class)->times(5)->create();
 
         $products = Product::query()
             ->orderBy('name', 'ASC')

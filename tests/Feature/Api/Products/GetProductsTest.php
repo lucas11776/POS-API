@@ -14,21 +14,24 @@ class GetProductsTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        factory(Product::class)->times(30)->create();
+        factory(Product::class)->times(5)->create();
     }
 
     public function testGetProducts()
     {
+        $totalProducts = Product::query()->count();
+        $defaultPerPage = 24;
+
         $this->getProducts()
             ->assertOk()
-            ->assertJsonCount(24, 'data');
+            ->assertJson(['per_page' => $defaultPerPage, 'total' => $totalProducts]);
     }
 
     public function testGetProductsWithLimit()
     {
         $this->getProducts(['limit' => 10])
             ->assertOk()
-            ->assertJsonCount(10, 'data');
+            ->assertJson(['per_page' => 10]);
     }
 
     public function testGetProductWithSearch()
