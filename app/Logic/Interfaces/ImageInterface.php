@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Logic;
+namespace App\Logic\Interfaces;
 
 use App\Image;
 use Illuminate\Database\Eloquent\Collection;

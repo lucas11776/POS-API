@@ -1,9 +1,11 @@
 <?php
 
+namespace App\Logic\Services;
 
-namespace App\Logic;
-
+use App\Logic\Image;
+use App\Logic\Upload;
 use App\Service as Model;
+use App\Logic\Interfaces\ServiceInterface;
 use Illuminate\Support\Str;
 
 class Service implements ServiceInterface

@@ -5,6 +5,7 @@ namespace App\Logic\Products;
 use App\Logic\Upload;
 use App\Product as Model;
 use App\Logic\Image as ImageLogic;
+use App\Logic\Interfaces\ProductInterface;
 use Illuminate\Support\Str;
 
 class Product implements ProductInterface

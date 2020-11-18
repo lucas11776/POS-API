@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Logic;
+namespace App\Logic\Interfaces;
 
 use App\Role;
 use App\User;
 
-interface UserInterface
+interface RoleInterface
 {
     /**
      * Add new user role.
      *
      * @param User $user
      * @param Role $role
-     * @return Role
+     * @return void
      */
-    public function addRole(User $user, Role $role): void;
+    public function add(User $user, Role $role): void;
 
     /**
      * Remove existing user role.
@@ -22,5 +22,5 @@ interface UserInterface
      * @param User $user
      * @param Role $role
      */
-    public function removeRole(User $user, Role $role): void;
+    public function remove(User $user, Role $role): void;
 }

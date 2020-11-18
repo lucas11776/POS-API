@@ -3,6 +3,7 @@
 namespace App\Logic;
 
 use App\User;
+use App\Logic\Interfaces\AuthenticationInterface;
 use Illuminate\Support\Facades\Hash;
 
 class Authentication implements AuthenticationInterface

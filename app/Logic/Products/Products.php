@@ -4,9 +4,9 @@ namespace App\Logic\Products;
 
 use App\ProductsCategory;
 use App\Product as Model;
+use App\Logic\Interfaces\ProductsInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Str;
 
 class Products implements ProductsInterface
 {
@@ -30,27 +30,5 @@ class Products implements ProductsInterface
         return ProductsCategory::query()
             ->orderBy('name', 'ASC')
             ->get();
-    }
-
-    public function createCategory(string $name): ProductsCategory
-    {
-        return ProductsCategory::create([
-            'name' => $name,
-            'url' => Str::slug($name)
-        ]);
-    }
-
-    public function updateCategory(ProductsCategory $category, string $name): ProductsCategory
-    {
-        $category->name = $name;
-        $category->url = Str::slug($name);
-        $category->save();
-        return $category;
-    }
-
-    public function deleteCategory(ProductsCategory $category): void
-    {
-        // TODO: Delete all category id from products
-        $category->delete();
     }
 }

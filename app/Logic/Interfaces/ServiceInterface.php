@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Logic;
-
+namespace App\Logic\Interfaces;
 
 use App\Service;
 

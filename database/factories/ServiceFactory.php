@@ -22,14 +22,14 @@ $factory->define(Service::class, function (Faker $faker) {
     $service->image()->create([
         'path' => $path = Storage::url(UploadedFile::fake()
             ->create('picture.png')
-            ->storePublicly(\App\Logic\Service::IMAGE_STORAGE)),
+            ->storePublicly(\App\Logic\Services\Service::IMAGE_STORAGE)),
         'url' => url($path)
     ]);
     for($i = 0; $i < 3; $i++)
         $service->images()->create([
             'path' => $path = Storage::url(UploadedFile::fake()
                 ->create('picture_' . $i . '.png')
-                ->storePublicly(\App\Logic\Service::IMAGE_STORAGE)),
+                ->storePublicly(\App\Logic\Services\Service::IMAGE_STORAGE)),
             'url' => url($path)
         ]);
 });

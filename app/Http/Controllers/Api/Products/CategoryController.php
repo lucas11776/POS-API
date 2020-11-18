@@ -5,18 +5,25 @@ namespace App\Http\Controllers\Api\Products;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\CreateCategoryRequest;
 use App\Http\Requests\Product\UpdateCategoryRequest;
+use App\Logic\Products\Category;
 use App\Logic\Products\Products;
 use App\ProductsCategory;
 
 class CategoryController extends Controller
 {
     /**
+     * @var Category
+     */
+    protected $category;
+
+    /**
      * @var Products
      */
     protected $products;
 
-    public function __construct(Products $products)
+    public function __construct(Category $category, Products $products)
     {
+        $this->category = $category;
         $this->products = $products;
     }
 
@@ -29,21 +36,21 @@ class CategoryController extends Controller
 
     public function create(CreateCategoryRequest $request)
     {
-        $category = $this->products->createCategory($request->get('name'));
+        $category = $this->category->create($request->validated());
 
         return response()->json($category);
     }
 
     public function update(ProductsCategory $category, UpdateCategoryRequest $request)
     {
-        $category = $this->products->updateCategory($category, $request->get('name'));
+        $category = $this->category->update($category, $request->get('name'));
 
         return response()->json($category);
     }
 
     public function delete(ProductsCategory $category)
     {
-        $this->products->deleteCategory($category);
+        $this->category->delete($category);
 
         return response()->json(['message' => 'Product category has been delete.']);
     }

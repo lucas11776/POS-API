@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Api\Services;
 
-use App\Logic\Service;
+use App\Logic\Services\Service;
 use App\ProductsCategory;
 use App\User;
 use Faker\Factory;

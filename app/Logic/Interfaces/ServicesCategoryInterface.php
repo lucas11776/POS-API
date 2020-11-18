@@ -1,12 +1,10 @@
 <?php
 
-
-namespace App\Logic;
-
+namespace App\Logic\Interfaces;
 
 use App\ServicesCategory;
 
-interface ServicesInterface
+interface ServicesCategoryInterface
 {
     /**
      * Create new service category in database.
@@ -14,7 +12,7 @@ interface ServicesInterface
      * @param array $category
      * @return ServicesCategory
      */
-    public function createCategory(array $category): ServicesCategory;
+    public function create(array $category): ServicesCategory;
 
     /**
      * Update service category in database.
@@ -23,12 +21,12 @@ interface ServicesInterface
      * @param array $data
      * @return ServicesCategory
      */
-    public function updateCategory(ServicesCategory $category, array $data): ServicesCategory;
+    public function update(ServicesCategory $category, array $data): ServicesCategory;
 
     /**
      * Delete service category in database.
      *
      * @param ServicesCategory $category
      */
-    public function deleteCategory(ServicesCategory $category): void;
+    public function delete(ServicesCategory $category): void;
 }

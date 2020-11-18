@@ -1,15 +1,14 @@
 <?php
 
-
-namespace App\Logic;
-
+namespace App\Logic\Services;
 
 use App\ServicesCategory;
+use App\Logic\Interfaces\ServicesCategoryInterface;
 use Illuminate\Support\Str;
 
-class Services implements ServicesInterface
+class Category implements ServicesCategoryInterface
 {
-    public function createCategory(array $category): ServicesCategory
+    public function create(array $category): ServicesCategory
     {
         return ServicesCategory::create([
             'name' => $category['name'],
@@ -17,7 +16,7 @@ class Services implements ServicesInterface
         ]);
     }
 
-    public function updateCategory(ServicesCategory $category, array $data): ServicesCategory
+    public function update(ServicesCategory $category, array $data): ServicesCategory
     {
         $category->name = $data['name'];
         $category->url = Str::slug($data['name']);
@@ -25,7 +24,7 @@ class Services implements ServicesInterface
         return $category;
     }
 
-    public function deleteCategory(ServicesCategory $category): void
+    public function delete(ServicesCategory $category): void
     {
         $category->delete();
     }

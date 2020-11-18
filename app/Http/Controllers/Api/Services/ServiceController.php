@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Api\Services;
 
-use App\Http\Requests\Service\UpdateServiceRequest;
 use App\Service as Model;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Service\CreateServiceRequest;
-use App\Logic\Service;
+use App\Http\Requests\Service\UpdateServiceRequest;
+use App\Logic\Services\Service;
 
 class ServiceController extends Controller
 {
