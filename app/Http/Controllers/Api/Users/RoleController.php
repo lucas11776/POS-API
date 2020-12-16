@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\Users;
 
+use App\Logic\Users\Users;
 use App\Role;
 use App\User as Model;
 use App\Logic\User\Role as RoleLogic;
@@ -16,9 +17,15 @@ class RoleController extends Controller
      */
     protected $role;
 
-    public function __construct(RoleLogic $role)
+    /**
+     * @var Users
+     */
+    protected $users;
+
+    public function __construct(RoleLogic $role, Users $users)
     {
         $this->role = $role;
+        $this->users = $users;
     }
 
     public function add(Model $user, AddRoleRequest $request)
@@ -27,7 +34,7 @@ class RoleController extends Controller
 
         $this->role->add($user, $role);
 
-        return response()->json($user->refresh());
+        return response()->json($this->users->account($user->id));
     }
 
     public function remove(Model $user, RemoveRoleRequest $request)

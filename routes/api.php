@@ -18,9 +18,13 @@ Route::prefix('auth')->namespace('authentication')->group(function () {
         ->middleware(['isGuest']);
     Route::post('login', 'AuthController@Login')
         ->middleware(['isGuest']);
+    Route::post('logout', 'AuthController@Logout')
+        ->middleware(['isUser']);
 });
 
 Route::prefix('user')->namespace('user')->group(function () {
+    Route::get('', 'UserController@Index')
+        ->middleware(['isUser']);
     Route::prefix('forgot')->group(function () {
         Route::post('password', 'ForgotPasswordController@Index');
     });

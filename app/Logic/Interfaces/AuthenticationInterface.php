@@ -23,6 +23,11 @@ interface AuthenticationInterface
     public function login(array $credentials);
 
     /**
+     * Logout user.
+     */
+    public function logout(): void;
+
+    /**
      * Convert user entity to jwt.
      *
      * @param User $user

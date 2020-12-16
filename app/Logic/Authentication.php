@@ -47,6 +47,11 @@ class Authentication implements AuthenticationInterface
         return $user;
     }
 
+    public function logout(string $guard = 'api'): void
+    {
+        auth($guard)->logout();
+    }
+
     public function respond_with_token(User $user, bool $stay_logged_in = false): array
     {
         return [

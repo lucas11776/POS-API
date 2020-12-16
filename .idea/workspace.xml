@@ -11,13 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Services/ServicesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Services/GetServicesTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Address.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/AddressFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_112147_create_addresses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/GetProfileTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/ServicesInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/ServicesInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Services/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Services/Services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Authentication/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Authentication/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Authentication.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/AuthenticationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/AuthenticationInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +161,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Logic\Services" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GetServicesTest">
+  <component name="RunManager" selected="PHPUnit.GetProfileTest">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -168,24 +171,29 @@
       <TestRunner directory="$PROJECT_DIR$/app/Http/Controllers/Api/Auth" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateProductCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Products\CreateProductCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/CreateProductCategoryTest.php" scope="Class" />
+    <configuration name="GetAllServicesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Services\GetAllServicesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/GetAllServicesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateServiceCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\CreateServiceCategoryTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/CreateServiceCategoryTest.php" scope="Class" />
+    <configuration name="GetProfileTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\User\GetProfileTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/GetProfileTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\CreateServiceTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/CreateServiceTest.php" scope="Class" />
+    <configuration name="LoginTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Authentication\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LoginTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="GetProductsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Products\GetProductsTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/GetProductsTest.php" scope="Class" />
+    <configuration name="LogoutTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP Lib" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="Tests\Feature\Api\Authentication\LogoutTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="GetServicesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\GetServicesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/GetServicesTest.php" scope="Class" />
+    <configuration name="LogoutTest.testLogout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Authentication\LogoutTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" method="testLogout" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -211,19 +219,19 @@
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.UpdateProductTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.CreateServiceTest" />
-      <item itemvalue="PHPUnit.CreateProductCategoryTest" />
-      <item itemvalue="PHPUnit.CreateServiceCategoryTest" />
-      <item itemvalue="PHPUnit.GetServicesTest" />
-      <item itemvalue="PHPUnit.GetProductsTest" />
+      <item itemvalue="PHPUnit.GetAllServicesTest" />
+      <item itemvalue="PHPUnit.LogoutTest" />
+      <item itemvalue="PHPUnit.LogoutTest.testLogout" />
+      <item itemvalue="PHPUnit.LoginTest" />
+      <item itemvalue="PHPUnit.GetProfileTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.GetServicesTest" />
-        <item itemvalue="PHPUnit.GetProductsTest" />
-        <item itemvalue="PHPUnit.CreateServiceCategoryTest" />
-        <item itemvalue="PHPUnit.CreateProductCategoryTest" />
-        <item itemvalue="PHPUnit.CreateServiceTest" />
+        <item itemvalue="PHPUnit.GetProfileTest" />
+        <item itemvalue="PHPUnit.LogoutTest" />
+        <item itemvalue="PHPUnit.LoginTest" />
+        <item itemvalue="PHPUnit.LogoutTest.testLogout" />
+        <item itemvalue="PHPUnit.GetAllServicesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +263,14 @@
       <workItem from="1605458346392" duration="15000" />
       <workItem from="1605542124890" duration="19512000" />
       <workItem from="1605634198984" duration="5435000" />
-      <workItem from="1605691580447" duration="2576000" />
+      <workItem from="1605691580447" duration="3649000" />
+      <workItem from="1605699685027" duration="615000" />
+      <workItem from="1605803612942" duration="20000" />
+      <workItem from="1605950462783" duration="94000" />
+      <workItem from="1607099538580" duration="3593000" />
+      <workItem from="1607370569236" duration="514000" />
+      <workItem from="1608095699190" duration="290000" />
+      <workItem from="1608098522385" duration="3552000" />
     </task>
     <servers />
   </component>
@@ -322,6 +337,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="327" y="0" width="640" height="680" key="#LoginTest/0.0.1280.680@0.0.1280.680" timestamp="1603258779489" />
+    <state x="370" y="0" width="640" height="728" key="#LogoutTest" timestamp="1607100927929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="370" y="0" width="640" height="728" key="#LogoutTest.testLogout" timestamp="1607100784300">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="370" y="0" width="640" height="728" key="#LogoutTest.testLogout/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1607100784300" />
+    <state x="370" y="0" width="640" height="728" key="#LogoutTest/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1607100927929" />
     <state x="347" y="0" key="#PHP" timestamp="1604324486610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -392,26 +415,34 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="354" height="552" key="GridCell.Tab.0.bottom" timestamp="1605694140835">
+    <state width="378" height="552" key="GridCell.Tab.0.bottom" timestamp="1608116680118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="354" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605694140835" />
-    <state width="354" height="552" key="GridCell.Tab.0.center" timestamp="1605694140834">
+    <state width="378" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
+    <state width="354" height="856" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468109" />
+    <state width="297" height="443" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441455" />
+    <state width="378" height="552" key="GridCell.Tab.0.center" timestamp="1608116680118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="354" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605694140834" />
-    <state width="354" height="552" key="GridCell.Tab.0.left" timestamp="1605694140834">
+    <state width="378" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
+    <state width="354" height="856" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
+    <state width="297" height="443" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441454" />
+    <state width="378" height="552" key="GridCell.Tab.0.left" timestamp="1608116680118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="354" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605694140834" />
-    <state width="354" height="552" key="GridCell.Tab.0.right" timestamp="1605694140835">
+    <state width="378" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
+    <state width="354" height="856" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468087" />
+    <state width="297" height="443" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441454" />
+    <state width="378" height="552" key="GridCell.Tab.0.right" timestamp="1608116680118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
-    <state width="354" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605694140835" />
+    <state width="378" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
+    <state width="354" height="856" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
+    <state width="297" height="443" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441455" />
     <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1605597475017">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

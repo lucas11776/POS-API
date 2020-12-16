@@ -40,4 +40,12 @@ class AuthController extends Controller
         return response()
             ->json($this->authentication->respond_with_token($user, isset($credentials['stay_logged_in'])));
     }
+
+    public function logout()
+    {
+        $this->authentication->logout('api');
+
+        return response()
+            ->json(['message' => 'You are logged out...']);
+    }
 }

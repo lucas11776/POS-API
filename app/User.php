@@ -58,7 +58,6 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $with = [
-        'image', 'roles'
     ];
 
     use Notifiable;
@@ -71,6 +70,16 @@ class User extends Authenticatable implements JWTSubject
     public function image(): MorphOne
     {
         return $this->morphOne(Image::class, 'imageable');
+    }
+
+    /**
+     * User address.
+     *
+     * @return MorphOne
+     */
+    public function address(): MorphOne
+    {
+        return $this->morphOne(Address::class, 'addressable');
     }
 
     /**
