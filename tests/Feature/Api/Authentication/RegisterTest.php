@@ -27,7 +27,7 @@ class RegisterTest extends TestCase
         $form = [
             'first_name' => $this->faker->firstName,
             'last_name' => $this->faker->lastName,
-            'gender' => $this->faker->randomElement(['male', 'female']),
+            'gender' => $this->faker->randomElement(User::GENDER),
             'email' => $this->faker->unique()->email,
             'cellphone_number' => $this->faker->e164PhoneNumber,
             'password' => User::DEFAULT_PASSWORD,

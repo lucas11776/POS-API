@@ -25,6 +25,8 @@ Route::prefix('auth')->namespace('authentication')->group(function () {
 Route::prefix('user')->namespace('user')->group(function () {
     Route::get('', 'UserController@Index')
         ->middleware(['isUser']);
+    Route::match(['PATCH', 'UPDATE'], '', 'UserController@Update')
+        ->middleware(['isUser']);
     Route::prefix('forgot')->group(function () {
         Route::post('password', 'ForgotPasswordController@Index');
     });

@@ -18,6 +18,13 @@ class User extends Authenticatable implements JWTSubject
     public const DEFAULT_PROFILE_PICTURE = 'assets/default/profile-picture.png';
 
     /**
+     * Types of gender.
+     *
+     * @var array
+     */
+    public const GENDER = ['female', 'male'];
+
+    /**
      * Default user password for testing.
      *
      * @var string

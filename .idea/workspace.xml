@@ -11,16 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/AddressFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_16_112147_create_addresses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/GetProfileTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/UpdateAccountDetailsRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/UpdateUserTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/Authentication/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/Authentication/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Authentication.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Authentication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/AuthenticationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/AuthenticationInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Logic/Users/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Users/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,11 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Logic\Services" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GetProfileTest">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
+    <configuration name="AddRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\Users\AddRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Users/AddRoleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -169,10 +174,6 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner directory="$PROJECT_DIR$/app/Http/Controllers/Api/Auth" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GetAllServicesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Services\GetAllServicesTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Services/GetAllServicesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="GetProfileTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -190,10 +191,6 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\Api\Authentication\LogoutTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="LogoutTest.testLogout" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Authentication\LogoutTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LogoutTest.php" method="testLogout" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -214,24 +211,28 @@
       <TestRunner class="Tests\Feature\Api\Product\UpdateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductTest.php" scope="Class" />
       <method v="2" />
     </configuration>
+    <configuration name="UpdateUserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\User\UpdateUserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/UpdateUserTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PHPUnit.Auth" />
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.UpdateProductTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.GetAllServicesTest" />
       <item itemvalue="PHPUnit.LogoutTest" />
-      <item itemvalue="PHPUnit.LogoutTest.testLogout" />
       <item itemvalue="PHPUnit.LoginTest" />
       <item itemvalue="PHPUnit.GetProfileTest" />
+      <item itemvalue="PHPUnit.AddRoleTest" />
+      <item itemvalue="PHPUnit.UpdateUserTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UpdateUserTest" />
+        <item itemvalue="PHPUnit.AddRoleTest" />
         <item itemvalue="PHPUnit.GetProfileTest" />
         <item itemvalue="PHPUnit.LogoutTest" />
         <item itemvalue="PHPUnit.LoginTest" />
-        <item itemvalue="PHPUnit.LogoutTest.testLogout" />
-        <item itemvalue="PHPUnit.GetAllServicesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -270,7 +271,7 @@
       <workItem from="1607099538580" duration="3593000" />
       <workItem from="1607370569236" duration="514000" />
       <workItem from="1608095699190" duration="290000" />
-      <workItem from="1608098522385" duration="3552000" />
+      <workItem from="1608098522385" duration="11731000" />
     </task>
     <servers />
   </component>
@@ -386,11 +387,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="92" y="92" width="1096" height="496" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1605619888733" />
-    <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser" timestamp="1605692758358">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser" timestamp="1608177194740">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603363938543" />
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1605692758358" />
+    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608177194740" />
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605675691575">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -401,11 +403,12 @@
     </state>
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
-    <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605675720979">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608126893940">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377389754" />
     <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605675720979" />
+    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126893940" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -415,55 +418,60 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="378" height="552" key="GridCell.Tab.0.bottom" timestamp="1608116680118">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom" timestamp="1608181408636">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468109" />
-    <state width="297" height="443" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441455" />
-    <state width="378" height="552" key="GridCell.Tab.0.center" timestamp="1608116680118">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
+    <state width="1281" height="928" key="GridCell.Tab.0.center" timestamp="1608181408636">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="297" height="443" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441454" />
-    <state width="378" height="552" key="GridCell.Tab.0.left" timestamp="1608116680118">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="928" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
+    <state width="1281" height="928" key="GridCell.Tab.0.left" timestamp="1608181408636">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468087" />
-    <state width="297" height="443" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441454" />
-    <state width="378" height="552" key="GridCell.Tab.0.right" timestamp="1608116680118">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="928" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
+    <state width="1281" height="928" key="GridCell.Tab.0.right" timestamp="1608181408636">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="297" height="443" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608116441455" />
-    <state width="1237" height="203" key="GridCell.Tab.1.bottom" timestamp="1605597475017">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1281" height="928" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1608126665534">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1237" height="203" key="GridCell.Tab.1.center" timestamp="1605597475017">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1608126665534">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1237" height="203" key="GridCell.Tab.1.left" timestamp="1605597475017">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1608126665534">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1237" height="203" key="GridCell.Tab.1.right" timestamp="1605597475017">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1608126665534">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state x="377" y="62" key="NewPhpClassDialog" timestamp="1605674398492">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
+    <state x="402" y="66" key="NewPhpClassDialog" timestamp="1608126874625">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="377" y="90" key="NewPhpClassDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604322004110" />
     <state x="377" y="62" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1605674398492" />
+    <state x="402" y="66" key="NewPhpClassDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126874625" />
     <state x="474" y="263" key="NewPhpFileDialog" timestamp="1603816648255">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -480,11 +488,12 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="587" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603259596651" />
-    <state width="600" height="348" key="javadoc.popup" timestamp="1604576525543">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="641" height="373" key="javadoc.popup" timestamp="1608124807187">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="600" height="452" key="javadoc.popup/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603363294039" />
     <state width="600" height="348" key="javadoc.popup/0.0.1280.680@0.0.1280.680" timestamp="1604576525543" />
+    <state width="641" height="373" key="javadoc.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608124807187" />
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog" timestamp="1603350230650">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -493,10 +502,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1605591475443" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1605692934810">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup" timestamp="1608177904960">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605692934810" />
+    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608177904960" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -505,6 +515,11 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Web/Auth/ConfirmPasswordController.php</url>
           <line>2</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/tests/Feature/Api/User/GetProfileTest.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,4 +13,6 @@ interface UserInterface
      * @return User
      */
     public function account(): User;
+
+    public function updatePersonalDetails(array $personalDetails): User;
 }
