@@ -25,6 +25,7 @@ $factory->define(User::class, function (Faker $faker) {
         'gender' => $faker->randomElement(['male', 'female']),
         'email' => $faker->unique()->email,
         'cellphone_number' => $faker->e164PhoneNumber,
+        'description' => $faker->words(300, true),
         'password' => Hash::make(User::DEFAULT_PASSWORD),
     ];
 })->afterCreating(User::class, function (User $user) {

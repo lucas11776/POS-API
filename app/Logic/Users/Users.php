@@ -22,4 +22,11 @@ class Users implements UsersInterface
         $user->save();
         return $user;
     }
+
+    public function updateAccountDescription(UserModel $user, array $accountDescription): UserModel
+    {
+        $user->description = $accountDescription['description'];
+        $user->save();
+        return $user;
+    }
 }

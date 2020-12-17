@@ -11,17 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/UpdateAccountDetailsRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/UpdateUserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/UpdateDescriptionRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/UpdateDescriptionTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Administrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Administrator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Logic/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/User/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Logic/Users/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Users/Users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/Authentication/RegisterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP Lib">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
@@ -180,10 +181,6 @@
       <TestRunner class="Tests\Feature\Api\User\GetProfileTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/GetProfileTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\Authentication\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Authentication/LoginTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="LogoutTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -200,6 +197,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\Api\User\RemoveRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Users/RemoveRoleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateDescriptionTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\User\UpdateDescriptionTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/UpdateDescriptionTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="UpdateProductTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -221,18 +222,18 @@
       <item itemvalue="PHPUnit.UpdateProductTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.LogoutTest" />
-      <item itemvalue="PHPUnit.LoginTest" />
       <item itemvalue="PHPUnit.GetProfileTest" />
       <item itemvalue="PHPUnit.AddRoleTest" />
       <item itemvalue="PHPUnit.UpdateUserTest" />
+      <item itemvalue="PHPUnit.UpdateDescriptionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UpdateDescriptionTest" />
         <item itemvalue="PHPUnit.UpdateUserTest" />
         <item itemvalue="PHPUnit.AddRoleTest" />
         <item itemvalue="PHPUnit.GetProfileTest" />
         <item itemvalue="PHPUnit.LogoutTest" />
-        <item itemvalue="PHPUnit.LoginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +272,7 @@
       <workItem from="1607099538580" duration="3593000" />
       <workItem from="1607370569236" duration="514000" />
       <workItem from="1608095699190" duration="290000" />
-      <workItem from="1608098522385" duration="11731000" />
+      <workItem from="1608098522385" duration="16664000" />
     </task>
     <servers />
   </component>
@@ -387,17 +388,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="92" y="92" width="1096" height="496" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.680@0.0.1280.680" timestamp="1605619888733" />
-    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser" timestamp="1608177194740">
+    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser" timestamp="1608184832804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="445" y="30" key="#com.intellij.ide.util.MemberChooser/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603363938543" />
     <state x="445" y="21" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1605692758358" />
-    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608177194740" />
-    <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605675691575">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="475" y="22" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608184832804" />
+    <state x="456" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608184429994">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377309681" />
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1605675691575" />
+    <state x="456" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608184429994" />
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603354094233">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -418,54 +420,54 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="1281" height="928" key="GridCell.Tab.0.bottom" timestamp="1608181408636">
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom" timestamp="1608186869039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468109" />
-    <state width="1281" height="928" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
-    <state width="1281" height="928" key="GridCell.Tab.0.center" timestamp="1608181408636">
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608186869039" />
+    <state width="1281" height="928" key="GridCell.Tab.0.center" timestamp="1608186869039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="1281" height="928" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
-    <state width="1281" height="928" key="GridCell.Tab.0.left" timestamp="1608181408636">
+    <state width="1281" height="928" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608186869039" />
+    <state width="1281" height="928" key="GridCell.Tab.0.left" timestamp="1608186869039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468087" />
-    <state width="1281" height="928" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
-    <state width="1281" height="928" key="GridCell.Tab.0.right" timestamp="1608181408636">
+    <state width="1281" height="928" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608186869039" />
+    <state width="1281" height="928" key="GridCell.Tab.0.right" timestamp="1608186869039">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="378" height="552" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608116680118" />
     <state width="354" height="856" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="1281" height="928" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608181408636" />
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1608126665534">
+    <state width="1281" height="928" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608186869039" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1608183496407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
-    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1608126665534">
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608183496407" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1608183496407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
-    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1608126665534">
+    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608183496407" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1608183496406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
-    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1608126665534">
+    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608183496406" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1608183496407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1237" height="203" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1605597475017" />
-    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608126665534" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608183496407" />
     <state x="402" y="66" key="NewPhpClassDialog" timestamp="1608126874625">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -498,15 +500,16 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="363" y="263" key="refactoring.ChangeSignatureDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603350230650" />
-    <state x="296" y="150" key="run.anything.popup" timestamp="1605591475443">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="316" y="161" key="run.anything.popup" timestamp="1608183937337">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="296" y="150" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1605591475443" />
-    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup" timestamp="1608177904960">
+    <state x="316" y="161" key="run.anything.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608183937337" />
+    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup" timestamp="1608184216282">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605692934810" />
-    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608177904960" />
+    <state x="323" y="1" width="718" height="726" key="search.everywhere.popup/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1608184216282" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -525,6 +528,6 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Api@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1603348890900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Api@phpunit_xml.xml" NAME="phpunit.xml Coverage Results" MODIFIED="1608181550303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('cellphone_number')->nullable()->unique();
             $table->timestamp('cellphone_number_verified_at')->nullable();
+            $table->longText('description')->nullable();
             $table->string('password');
         });
     }

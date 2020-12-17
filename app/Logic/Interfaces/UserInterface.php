@@ -14,5 +14,19 @@ interface UserInterface
      */
     public function account(): User;
 
+    /**
+     * Update user account personal details (first_name, last_name, gender).
+     *
+     * @param array $personalDetails
+     * @return User
+     */
     public function updatePersonalDetails(array $personalDetails): User;
+
+    /**
+     * Update user description.
+     *
+     * @param array $description
+     * @return User
+     */
+    public function updateDescription(array $description): User;
 }

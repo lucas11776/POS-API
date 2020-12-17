@@ -18,7 +18,7 @@ class Administrator
     {
         if(! auth()->user()->roles()->where(['name' => 'administrator'])->exists()) {
             return response()
-                ->json(['message' => 'Access Denied.'], Response::HTTP_UNAUTHORIZED);
+                ->json(['message' => 'Unauthorized Access'], Response::HTTP_UNAUTHORIZED);
         }
 
         return $next($request);
