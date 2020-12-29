@@ -28,6 +28,9 @@ Route::prefix('user')->namespace('user')->group(function () {
         Route::match(['PATCH', 'UPDATE'], '', 'UserController@Update');
         Route::match(['PATCH', 'UPDATE'], 'description', 'UserController@UpdateDescription');
         Route::match(['PATCH', 'UPDATE'], 'address', 'UserController@UpdateAddress');
+        Route::prefix('profile')->group(function() {
+            Route::post('picture', 'UserController@UploadProfilePicture');
+        });
     });
     Route::middleware(['isGuest'])->group(function () {
         Route::prefix('forgot')->group(function () {

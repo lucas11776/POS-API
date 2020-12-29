@@ -4,6 +4,7 @@ namespace App\Logic\Interfaces;
 
 use App\Role;
 use App\User;
+use Illuminate\Http\UploadedFile;
 
 interface UserInterface
 {
@@ -37,4 +38,10 @@ interface UserInterface
      * @return User
      */
     public function updateAddress(array $address): User;
+
+    /**
+     * @param UploadedFile $image
+     * @return User
+     */
+    public function uploadProfilePicture(UploadedFile $image): User;
 }

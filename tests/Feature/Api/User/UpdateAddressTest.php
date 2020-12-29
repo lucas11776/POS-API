@@ -19,7 +19,6 @@ class UpdateAddressTest extends TestCase
     protected $user;
 
     /**
-     * @var
      * @var Factory
      */
     protected $faker;
@@ -45,7 +44,7 @@ class UpdateAddressTest extends TestCase
             'address' => $this->faker->address,
             'country_id' => ($country = factory(Country::class)->create())->id,
             'city' => $this->faker->city,
-            'postal_code' => $this->faker->postcode
+            'postal_code' => $this->faker->numberBetween(1000, 13953568)
         ];
 
         $this->updateAddress($form)

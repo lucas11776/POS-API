@@ -19,6 +19,15 @@ interface ImageInterface
     public function createImage(MorphOne $image, string $path): Image;
 
     /**
+     * Upload image path.
+     *
+     * @param Image $image
+     * @param string $path
+     * @return Image
+     */
+    public function updateImage(Image $image, string $path): Image;
+
+    /**
      * Create multiple image entity from relationship.
      *
      * @param MorphMany $images

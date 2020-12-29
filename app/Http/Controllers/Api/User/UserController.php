@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\User\UpdateAccountDetailsRequest;
 use App\Http\Requests\User\UpdateAddressRequest;
 use App\Http\Requests\User\UpdateDescriptionRequest;
+use App\Http\Requests\User\UploadProfilePictureRequest;
 use App\Logic\User\User;
 use Illuminate\Http\Request;
 
@@ -39,5 +40,10 @@ class UserController extends Controller
     public function updateAddress(UpdateAddressRequest $request)
     {
         return response($this->user->updateAddress($request->validated()));
+    }
+
+    public function uploadProfilePicture(UploadProfilePictureRequest $request)
+    {
+        return response($this->user->uploadProfilePicture($request->file('image')));
     }
 }

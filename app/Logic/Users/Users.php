@@ -4,12 +4,31 @@
 namespace App\Logic\Users;
 
 use App\Country;
+use App\Logic\Image;
+use App\Logic\Upload;
 use App\User;
 use App\User as UserModel;
 use App\Logic\Interfaces\UsersInterface;
+use Illuminate\Http\UploadedFile;
 
 class Users implements UsersInterface
 {
+    /**
+     * @var Upload
+     */
+    protected $upload;
+
+    /**
+     * @var Image
+     */
+    protected $image;
+
+    public function __construct(Upload $upload, Image $image)
+    {
+        $this->upload = $upload;
+        $this->image = $image;
+    }
+
     public function account(int $id): UserModel
     {
         return UserModel::with(['address', 'image', 'roles'])
@@ -47,6 +66,13 @@ class Users implements UsersInterface
     {
         $user->country_id = $country->id;
         $user->save();
+        return $user;
+    }
+
+    public function uploadProfilePicture(UserModel $user, UploadedFile $image): UserModel
+    {
+        $path =  $this->upload->upload($image, User::PROFILE_PICTURE_STORAGE);
+        $user->image = $this->image->updateImage($user->image, $path);
         return $user;
     }
 

@@ -4,6 +4,7 @@ namespace App\Logic\Interfaces;
 
 use App\Country;
 use App\User;
+use Illuminate\Http\UploadedFile;
 
 interface UsersInterface
 {
@@ -50,4 +51,13 @@ interface UsersInterface
      * @return User
      */
     public function updateAccountCountry(User $user, Country $country): User;
+
+    /**
+     * Change profile picture.
+     *
+     * @param User $user
+     * @param UploadedFile $image
+     * @return User
+     */
+    public function uploadProfilePicture(User $user, UploadedFile $image): User;
 }

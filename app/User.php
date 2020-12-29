@@ -30,6 +30,13 @@ class User extends Authenticatable implements JWTSubject
     public const DEFAULT_PROFILE_PICTURE = 'assets/default/profile-picture.png';
 
     /**
+     * Profile picture storage.
+     *
+     * @var string
+     */
+    public const PROFILE_PICTURE_STORAGE = 'avatars';
+
+    /**
      * Types of gender.
      *
      * @var array

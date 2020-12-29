@@ -5,6 +5,7 @@ namespace App\Logic\User;
 use App\Logic\Users\Users;
 use App\User as UserModel;
 use App\Logic\Interfaces\UserInterface;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
 
 class User implements UserInterface
@@ -37,5 +38,10 @@ class User implements UserInterface
     public function updateAddress(array $address): UserModel
     {
         return $this->users->updateAccountAddress(Auth::user(), $address);
+    }
+
+    public function uploadProfilePicture(UploadedFile $image): UserModel
+    {
+        return $this->users->uploadProfilePicture(Auth::user(), $image);
     }
 }

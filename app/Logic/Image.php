@@ -19,6 +19,14 @@ class Image implements ImageInterface
         ]);
     }
 
+    public function updateImage(Model $image, string $path): Model
+    {
+        $image->path = $path;
+        $image->url = url($path);
+        $image->save();
+        return $image;
+    }
+
     public function createImages(MorphMany $images, array $paths): Collection
     {
         $paths = array_map(function (string $path) {
