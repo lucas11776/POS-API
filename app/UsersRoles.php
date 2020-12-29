@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property integer user_id
+ * @property integer role_id
+ */
 class UsersRoles extends Model
 {
     /**

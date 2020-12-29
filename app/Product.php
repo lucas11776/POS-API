@@ -2,13 +2,26 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property Image image
+ * @property Collection images
+ * @property string category_id
+ * @property string name
+ * @property string url
+ * @property float price
+ * @property float discount
+ * @property integer in_stock
+ * @property string barcode
+ * @property string description
+ * @property ServicesCategory category
+ */
 class Product extends Model
 {
     /**

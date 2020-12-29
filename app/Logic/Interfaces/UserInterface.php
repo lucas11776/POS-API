@@ -29,4 +29,12 @@ interface UserInterface
      * @return User
      */
     public function updateDescription(array $description): User;
+
+    /**
+     * Update user address.
+     *
+     * @param array $address
+     * @return User
+     */
+    public function updateAddress(array $address): User;
 }

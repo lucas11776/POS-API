@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property string path
+ * @property string url
+ */
 class Image extends Model
 {
     /**

@@ -2,12 +2,24 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Tymon\JWTAuth\Contracts\JWTSubject;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Illuminate\Notifications\Notifiable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
+/**
+ * @property Image image
+ * @property string first_name
+ * @property string last_name
+ * @property string gender
+ * @property string email
+ * @property string cellphone_number
+ * @property string description
+ * @property Address address
+ * @property Collection roles
+ */
 class User extends Authenticatable implements JWTSubject
 {
     /**
@@ -37,7 +49,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name', 'gender', 'email', 'cellphone_number', 'description', 'password'
+        'first_name', 'last_name', 'country_id', 'gender', 'email', 'cellphone_number', 'description', 'password'
     ];
 
     /**

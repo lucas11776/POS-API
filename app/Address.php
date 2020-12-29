@@ -4,6 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property string address
+ * @property string country
+ * @property string city
+ * @property string postal_code
+ */
 class Address extends Model
 {
     /**

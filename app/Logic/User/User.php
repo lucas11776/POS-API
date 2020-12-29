@@ -33,4 +33,9 @@ class User implements UserInterface
     {
         return $this->users->updateAccountDescription(Auth::user(), $description);
     }
+
+    public function updateAddress(array $address): UserModel
+    {
+        return $this->users->updateAccountAddress(Auth::user(), $address);
+    }
 }

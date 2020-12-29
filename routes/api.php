@@ -23,14 +23,16 @@ Route::prefix('auth')->namespace('authentication')->group(function () {
 });
 
 Route::prefix('user')->namespace('user')->group(function () {
-    Route::get('', 'UserController@Index')
-        ->middleware(['isUser']);
-    Route::match(['PATCH', 'UPDATE'], '', 'UserController@Update')
-        ->middleware(['isUser']);
-    Route::match(['PATCH', 'UPDATE'], 'description', 'UserController@UpdateDescription')
-        ->middleware(['isUser']);
-    Route::prefix('forgot')->group(function () {
-        Route::post('password', 'ForgotPasswordController@Index');
+    Route::middleware(['isUser'])->group(function () {
+        Route::get('', 'UserController@Index');
+        Route::match(['PATCH', 'UPDATE'], '', 'UserController@Update');
+        Route::match(['PATCH', 'UPDATE'], 'description', 'UserController@UpdateDescription');
+        Route::match(['PATCH', 'UPDATE'], 'address', 'UserController@UpdateAddress');
+    });
+    Route::middleware(['isGuest'])->group(function () {
+        Route::prefix('forgot')->group(function () {
+            Route::post('password', 'ForgotPasswordController@Index');
+        });
     });
 });
 

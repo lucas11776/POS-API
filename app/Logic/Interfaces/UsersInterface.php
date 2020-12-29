@@ -2,6 +2,7 @@
 
 namespace App\Logic\Interfaces;
 
+use App\Country;
 use App\User;
 
 interface UsersInterface
@@ -18,17 +19,35 @@ interface UsersInterface
      * Update account first_name, last_name and gender.
      *
      * @param User $user
-     * @param array $accountDetails
+     * @param array $details
      * @return User
      */
-    public function updateAccountDetails(User $user, array $accountDetails): User;
+    public function updateAccountDetails(User $user, array $details): User;
 
     /**
      * Update user account description.
      *
      * @param User $user
-     * @param array $accountDescription
+     * @param array $description
      * @return User
      */
-    public  function updateAccountDescription(User $user, array $accountDescription): User;
+    public  function updateAccountDescription(User $user, array $description): User;
+
+    /**
+     * Update user account address.
+     *
+     * @param User $user
+     * @param array $address
+     * @return User
+     */
+    public function updateAccountAddress(User $user, array $address): User;
+
+    /**
+     * Update user country address.
+     *
+     * @param User $user
+     * @param Country $country
+     * @return User
+     */
+    public function updateAccountCountry(User $user, Country $country): User;
 }

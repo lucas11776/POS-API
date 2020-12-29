@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Country;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Facades\Hash;
@@ -22,7 +23,8 @@ $factory->define(User::class, function (Faker $faker) {
     return [
         'first_name' => $faker->firstName,
         'last_name' => $faker->lastName,
-        'gender' => $faker->randomElement(['male', 'female']),
+        'country_id' => factory(Country::class)->create()->id,
+        'gender' => $faker->randomElement(User::GENDER),
         'email' => $faker->unique()->email,
         'cellphone_number' => $faker->e164PhoneNumber,
         'description' => $faker->words(300, true),
