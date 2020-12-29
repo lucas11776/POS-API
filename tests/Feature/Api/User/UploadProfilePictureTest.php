@@ -33,6 +33,12 @@ class UploadProfilePictureTest extends TestCase
         $form = ['image' => UploadedFile::fake()->create('image.png', 1024 * 2)];
 
         $this->uploadProfilePicture($form)
+            ->assertJson([
+                'image' => [
+                    'path' => $path = Storage::url(User::PROFILE_PICTURE_STORAGE . '/' . $form['image']->hashName()),
+                    'url' => url($path)
+                ],
+            ])
             ->assertOk();
 
         Storage::exists(User::PROFILE_PICTURE_STORAGE . '/' . $form['image']->hashName());

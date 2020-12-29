@@ -11,18 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f62c83c-09d3-4aa8-bb20-c4de090eceea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/User/UploadProfilePictureRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/UploadProfilePictureTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/ImageInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/ImageInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UserInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Interfaces/UsersInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Logic/Users/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Logic/Users/Users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Api/User/ResetProfilePictureTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +151,7 @@
       <recent name="D:\Projects\Software-Development\Cafe-System\Api\app\Logic\Services" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.UploadProfilePictureTest">
+  <component name="RunManager" selected="PHPUnit.ResetProfilePictureTest">
     <configuration name="Auth" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -172,8 +161,8 @@
       <TestRunner directory="$PROJECT_DIR$/app/Http/Controllers/Api/Auth" />
       <method v="2" />
     </configuration>
-    <configuration name="CountriesLogicTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\CountriesLogicTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/CountriesLogicTest.php" scope="Class" />
+    <configuration name="CountriesLogicTest.testGetListOfCountries" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\CountriesLogicTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/CountriesLogicTest.php" method="testGetListOfCountries" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RemoveRoleTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -183,6 +172,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Tests\Feature\Api\User\RemoveRoleTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Users/RemoveRoleTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ResetProfilePictureTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\Api\User\ResetProfilePictureTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/ResetProfilePictureTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="UpdateAddressTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -202,10 +195,6 @@
       <TestRunner class="Tests\Feature\Api\Product\UpdateProductTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/Products/UpdateProductTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UpdateUserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\Api\User\UpdateUserTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/UpdateUserTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
     <configuration name="UploadProfilePictureTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\Api\User\UploadProfilePictureTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/Api/User/UploadProfilePictureTest.php" scope="Class" />
       <method v="2" />
@@ -215,19 +204,19 @@
       <item itemvalue="PHPUnit.RemoveRoleTest" />
       <item itemvalue="PHPUnit.UpdateProductTest" />
       <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.UpdateUserTest" />
       <item itemvalue="PHPUnit.UpdateAddressTest" />
-      <item itemvalue="PHPUnit.CountriesLogicTest" />
       <item itemvalue="PHPUnit.UpdateAddressTest.testUpdateAddress" />
       <item itemvalue="PHPUnit.UploadProfilePictureTest" />
+      <item itemvalue="PHPUnit.CountriesLogicTest.testGetListOfCountries" />
+      <item itemvalue="PHPUnit.ResetProfilePictureTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.UploadProfilePictureTest" />
+        <item itemvalue="PHPUnit.ResetProfilePictureTest" />
+        <item itemvalue="PHPUnit.CountriesLogicTest.testGetListOfCountries" />
         <item itemvalue="PHPUnit.UpdateAddressTest" />
         <item itemvalue="PHPUnit.UpdateAddressTest.testUpdateAddress" />
-        <item itemvalue="PHPUnit.CountriesLogicTest" />
-        <item itemvalue="PHPUnit.UpdateUserTest" />
+        <item itemvalue="PHPUnit.UploadProfilePictureTest" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +260,7 @@
       <workItem from="1608711876473" duration="1038000" />
       <workItem from="1608797204529" duration="6104000" />
       <workItem from="1609073999183" duration="3387000" />
-      <workItem from="1609167695007" duration="17797000" />
+      <workItem from="1609167695007" duration="19391000" />
     </task>
     <servers />
   </component>
@@ -404,12 +393,12 @@
     </state>
     <state x="370" y="124" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603354094233" />
     <state x="370" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603207461516" />
-    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609235435979">
+    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609238442142">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="370" y="136" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603377389754" />
     <state x="370" y="94" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605675720979" />
-    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609235435979" />
+    <state x="395" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609238442142" />
     <state x="327" y="0" width="640" height="680" key="#phpunit.xml" timestamp="1603207593443">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -419,34 +408,34 @@
     </state>
     <state x="420" y="136" key="FileChooserDialogImpl/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1603367814648" />
     <state x="420" y="94" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603207359947" />
-    <state width="1281" height="928" key="GridCell.Tab.0.bottom" timestamp="1609237909613">
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom" timestamp="1609239014316">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.bottom/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="1281" height="624" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1609224775287" />
     <state width="354" height="856" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468109" />
-    <state width="1281" height="928" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609237909613" />
-    <state width="1281" height="928" key="GridCell.Tab.0.center" timestamp="1609237909613">
+    <state width="1281" height="928" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609239014316" />
+    <state width="1281" height="928" key="GridCell.Tab.0.center" timestamp="1609239014315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.center/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="1281" height="624" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1609224775287" />
     <state width="354" height="856" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="1281" height="928" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609237909613" />
-    <state width="1281" height="928" key="GridCell.Tab.0.left" timestamp="1609237909613">
+    <state width="1281" height="928" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609239014315" />
+    <state width="1281" height="928" key="GridCell.Tab.0.left" timestamp="1609239014315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.left/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="1281" height="624" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1609224775287" />
     <state width="354" height="856" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468087" />
-    <state width="1281" height="928" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609237909613" />
-    <state width="1281" height="928" key="GridCell.Tab.0.right" timestamp="1609237909613">
+    <state width="1281" height="928" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609239014315" />
+    <state width="1281" height="928" key="GridCell.Tab.0.right" timestamp="1609239014315">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="509" height="856" key="GridCell.Tab.0.right/-1280.156.1280.680/0.0.1280.984@0.0.1280.984" timestamp="1604323927464" />
     <state width="1281" height="624" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1609224775287" />
     <state width="354" height="856" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@-1280.0.1280.984" timestamp="1607111468108" />
-    <state width="1281" height="928" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609237909613" />
+    <state width="1281" height="928" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.984@0.0.1366.728" timestamp="1609239014315" />
     <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1609231956490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

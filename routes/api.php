@@ -30,6 +30,7 @@ Route::prefix('user')->namespace('user')->group(function () {
         Route::match(['PATCH', 'UPDATE'], 'address', 'UserController@UpdateAddress');
         Route::prefix('profile')->group(function() {
             Route::post('picture', 'UserController@UploadProfilePicture');
+            Route::delete('picture', 'UserController@ResetProfilePicture');
         });
     });
     Route::middleware(['isGuest'])->group(function () {

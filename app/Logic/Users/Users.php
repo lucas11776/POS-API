@@ -10,6 +10,7 @@ use App\User;
 use App\User as UserModel;
 use App\Logic\Interfaces\UsersInterface;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 
 class Users implements UsersInterface
 {
@@ -54,7 +55,7 @@ class Users implements UsersInterface
     public function updateAccountAddress(UserModel $user, array $address): UserModel
     {
         if(isset($address['country_id'])) {
-            $country = $this->getCountry($address['country_id']);
+            $country =  Country::find($address['country_id']);
             $address['country'] = $country->name;
             $this->updateAccountCountry($user, $country);
         }
@@ -69,21 +70,22 @@ class Users implements UsersInterface
         return $user;
     }
 
-    public function uploadProfilePicture(UserModel $user, UploadedFile $image): UserModel
+    public function uploadAccountProfilePicture(UserModel $user, UploadedFile $image): UserModel
     {
-        $path =  $this->upload->upload($image, User::PROFILE_PICTURE_STORAGE);
-        $user->image = $this->image->updateImage($user->image, $path);
+        $path = $this->upload->upload($image, User::PROFILE_PICTURE_STORAGE);
+        $user->image = $this->image->createImage($user->image(), $path);
         return $user;
     }
 
-    /**
-     * Get country by id.
-     *
-     * @param int $id
-     * @return Country
-     */
-    private function getCountry(int $id): Country
+    public function resetAccountProfilePicture(User $user): User
     {
-        return Country::find($id);
+        $defaultProfilePictureUrl = url(User::DEFAULT_PROFILE_PICTURE);
+
+        if($user->image->url != User::DEFAULT_PROFILE_PICTURE)
+            $user->image()->update(['url' => $defaultProfilePictureUrl, 'path' => null]);
+        else
+            $this->image->createImage($user->image(), $defaultProfilePictureUrl);
+
+        return $user->refresh();
     }
 }

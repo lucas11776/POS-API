@@ -42,6 +42,11 @@ class User implements UserInterface
 
     public function uploadProfilePicture(UploadedFile $image): UserModel
     {
-        return $this->users->uploadProfilePicture(Auth::user(), $image);
+        return $this->users->uploadAccountProfilePicture(Auth::user(), $image);
+    }
+
+    public function resetProfilePicture(): UserModel
+    {
+        return $this->users->resetAccountProfilePicture(Auth::user());
     }
 }

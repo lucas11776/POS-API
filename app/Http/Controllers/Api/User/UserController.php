@@ -24,26 +24,31 @@ class UserController extends Controller
 
     public function index(User $user)
     {
-        return response($this->user->account());
+        return response()->json($this->user->account());
     }
 
     public function update(UpdateAccountDetailsRequest $request)
     {
-        return response($this->user->updatePersonalDetails($request->validated()));
+        return response()->json($this->user->updatePersonalDetails($request->validated()));
     }
 
     public function updateDescription(UpdateDescriptionRequest $request)
     {
-        return response($this->user->updateDescription($request->validated()));
+        return response()->json($this->user->updateDescription($request->validated()));
     }
 
     public function updateAddress(UpdateAddressRequest $request)
     {
-        return response($this->user->updateAddress($request->validated()));
+        return response()->json($this->user->updateAddress($request->validated()));
     }
 
     public function uploadProfilePicture(UploadProfilePictureRequest $request)
     {
-        return response($this->user->uploadProfilePicture($request->file('image')));
+        return response()->json($this->user->uploadProfilePicture($request->file('image')));
+    }
+
+    public function resetProfilePicture()
+    {
+        return response()->json($this->user->resetProfilePicture());
     }
 }

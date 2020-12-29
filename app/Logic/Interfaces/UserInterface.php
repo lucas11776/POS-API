@@ -44,4 +44,11 @@ interface UserInterface
      * @return User
      */
     public function uploadProfilePicture(UploadedFile $image): User;
+
+    /**
+     * Reset user profile picture to default profile picture
+     *
+     * @return User
+     */
+    public function resetProfilePicture(): User;
 }

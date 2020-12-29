@@ -59,5 +59,13 @@ interface UsersInterface
      * @param UploadedFile $image
      * @return User
      */
-    public function uploadProfilePicture(User $user, UploadedFile $image): User;
+    public function uploadAccountProfilePicture(User $user, UploadedFile $image): User;
+
+    /**
+     * Changes account profile picture to default profile picture.
+     *
+     * @param User $user
+     * @return User
+     */
+    public function resetAccountProfilePicture(User $user): User;
 }
