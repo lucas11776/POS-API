@@ -53,7 +53,7 @@ interface UsersInterface
     public function updateAccountCountry(User $user, Country $country): User;
 
     /**
-     * Change profile picture.
+     * Upload user account profile picture.
      *
      * @param User $user
      * @param UploadedFile $image
@@ -68,4 +68,12 @@ interface UsersInterface
      * @return User
      */
     public function resetAccountProfilePicture(User $user): User;
+
+    /**
+     * Send email verification mail to account email address.
+     *
+     * @param User $user
+     * @return bool
+     */
+    public function verifyAccountEmail(User $user): void;
 }

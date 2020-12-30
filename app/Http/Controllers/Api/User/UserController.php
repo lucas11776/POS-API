@@ -51,4 +51,10 @@ class UserController extends Controller
     {
         return response()->json($this->user->resetProfilePicture());
     }
+
+    public function verifyEmail()
+    {
+        $this->user->verifyEmail();
+        return response()->json(['message' => 'You will shortly receive a email verification link.']);
+    }
 }

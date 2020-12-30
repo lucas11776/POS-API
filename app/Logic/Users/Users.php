@@ -3,14 +3,13 @@
 
 namespace App\Logic\Users;
 
+use App\User;
 use App\Country;
 use App\Logic\Image;
 use App\Logic\Upload;
-use App\User;
-use App\User as UserModel;
 use App\Logic\Interfaces\UsersInterface;
+use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
 
 class Users implements UsersInterface
 {
@@ -30,14 +29,15 @@ class Users implements UsersInterface
         $this->image = $image;
     }
 
-    public function account(int $id): UserModel
+    public function account(int $id): User
     {
-        return UserModel::with(['address', 'image', 'roles'])
+        return User::query()
+            ->with(['address', 'image', 'roles'])
             ->where('id', $id)
             ->firstOrFail();
     }
 
-    public function updateAccountDetails(UserModel $user, array $details): UserModel
+    public function updateAccountDetails(User $user, array $details): User
     {
         foreach (['first_name', 'last_name', 'gender'] as $key)
             $user->{$key} = isset($details[$key]) ? $details[$key] : null;
@@ -45,14 +45,14 @@ class Users implements UsersInterface
         return $this->account($user->getKey());
     }
 
-    public function updateAccountDescription(UserModel $user, array $description): UserModel
+    public function updateAccountDescription(User $user, array $description): User
     {
         $user->description = $description['description'];
         $user->save();
         return $this->account($user->getKey());
     }
 
-    public function updateAccountAddress(UserModel $user, array $address): UserModel
+    public function updateAccountAddress(User $user, array $address): User
     {
         if(isset($address['country_id'])) {
             $country =  Country::find($address['country_id']);
@@ -63,14 +63,14 @@ class Users implements UsersInterface
         return $user;
     }
 
-    public function updateAccountCountry(UserModel $user, Country $country): User
+    public function updateAccountCountry(User $user, Country $country): User
     {
         $user->country_id = $country->id;
         $user->save();
         return $user;
     }
 
-    public function uploadAccountProfilePicture(UserModel $user, UploadedFile $image): UserModel
+    public function uploadAccountProfilePicture(User $user, UploadedFile $image): User
     {
         $path = $this->upload->upload($image, User::PROFILE_PICTURE_STORAGE);
         $user->image = $this->image->createImage($user->image(), $path);
@@ -80,12 +80,13 @@ class Users implements UsersInterface
     public function resetAccountProfilePicture(User $user): User
     {
         $defaultProfilePictureUrl = url(User::DEFAULT_PROFILE_PICTURE);
-
-        if($user->image->url != User::DEFAULT_PROFILE_PICTURE)
-            $user->image()->update(['url' => $defaultProfilePictureUrl, 'path' => null]);
-        else
+        if($user->image->url != $defaultProfilePictureUrl)
             $this->image->createImage($user->image(), $defaultProfilePictureUrl);
-
         return $user->refresh();
+    }
+
+    public function verifyAccountEmail(User $user): void
+    {
+        $user->notify(new VerifyEmail);
     }
 }

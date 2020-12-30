@@ -40,6 +40,8 @@ interface UserInterface
     public function updateAddress(array $address): User;
 
     /**
+     * Upload user profile picture.
+     *
      * @param UploadedFile $image
      * @return User
      */
@@ -51,4 +53,11 @@ interface UserInterface
      * @return User
      */
     public function resetProfilePicture(): User;
+
+    /**
+     * Send email verification link to user email address.
+     *
+     * @return bool
+     */
+    public function verifyEmail(): void;
 }

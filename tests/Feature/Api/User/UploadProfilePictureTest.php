@@ -28,7 +28,7 @@ class UploadProfilePictureTest extends TestCase
 
     public function testUploadProfilePicture()
     {
-        Storage::fake(User::PROFILE_PICTURE_STORAGE);
+        Storage::fake();
 
         $form = ['image' => UploadedFile::fake()->create('image.png', 1024 * 2)];
 

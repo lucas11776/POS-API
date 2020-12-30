@@ -8,14 +8,14 @@ use App\Logic\Interfaces\ImageInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class Image implements ImageInterface
 {
     public function createImage(MorphOne $image, string $path): Model
     {
         return $image->create([
-            'path' => $path,
+            'path' => $this->fileExistsInStorage($path) ? $path : null,
             'url' => url($path)
         ]);
     }
@@ -32,11 +32,16 @@ class Image implements ImageInterface
     {
         $paths = array_map(function (string $path) {
             return [
-                'path' => $path,
+                'path' => $this->fileExistsInStorage($path) ? $path : null,
                 'url' => url($path)
             ];
         }, $paths);
 
         return $images->createMany($paths);
+    }
+
+    private function fileExistsInStorage(string $path): bool
+    {
+        return Storage::exists(str_replace('/storage/', '', $path));
     }
 }

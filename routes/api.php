@@ -32,6 +32,9 @@ Route::prefix('user')->namespace('user')->group(function () {
             Route::post('picture', 'UserController@UploadProfilePicture');
             Route::delete('picture', 'UserController@ResetProfilePicture');
         });
+        Route::prefix('verify')->group(function() {
+            Route::post('email', 'UserController@VerifyEmail');
+        });
     });
     Route::middleware(['isGuest'])->group(function () {
         Route::prefix('forgot')->group(function () {

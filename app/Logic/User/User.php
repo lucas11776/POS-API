@@ -49,4 +49,9 @@ class User implements UserInterface
     {
         return $this->users->resetAccountProfilePicture(Auth::user());
     }
+
+    public function verifyEmail(): void
+    {
+        $this->users->verifyAccountEmail(Auth::user());
+    }
 }
